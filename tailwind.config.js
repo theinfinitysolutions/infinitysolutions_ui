@@ -12,14 +12,37 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      animation: {
-        rotate: "rotate 6s linear infinite",
-      },
       keyframes: {
         rotate: {
           "0%": { transform: "rotate(0deg) scale(10)" },
           "100%": { transform: "rotate(-360deg) scale(10)" },
         },
+        slideUp: {
+          "0%": { opacity: 0, transform: "translateY(20vh)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+        textTransform: {
+          "0%": {
+            transform: " translateZ(0px)  ",
+          },
+          "100%": {
+            transform: " translateZ(-50vh) ",
+          },
+        },
+        "text-reveal": {
+          "0%": {
+            transform: "translate(0, 100%)",
+          },
+          "100%": {
+            transform: "translate(0, 0)",
+          },
+        },
+      },
+      animation: {
+        rotate: "rotate 6s linear infinite",
+        slideUp: "slideUp 1.5s ease-in-out forwards",
+        textTransform: "textTransform 2s ease-in-out forwards",
+        "text-reveal": "text-reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s",
       },
     },
   },
