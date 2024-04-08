@@ -1,9 +1,9 @@
-import { Montserrat } from "next/font/google";
+import { Lora } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-const inter = Montserrat({ subsets: ["latin"] });
+const inter = Lora({ subsets: ["latin"] });
 
 export const metadata = {
   title: "The Infinity Solutions",
