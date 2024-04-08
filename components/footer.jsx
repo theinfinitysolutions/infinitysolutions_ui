@@ -18,8 +18,9 @@ const navbarItems = [
 const Footer = () => {
   const router = useRouter();
   return (
-    <footer className="bg-black w-screen text-white pb-6 bottom-0 z-[10]">
-      <div className="border-t border-[#5581d466]  pt-4 flex flex-col-reverse items-center  md:flex-row md:justify-between">
+    <footer className="bg-black w-screen text-white pb-4 bottom-0 z-[10]">
+      <div></div>
+      <div className="border-t border-[#0097b2]  pt-4 flex flex-col-reverse items-center  md:flex-row md:justify-between">
         <div className="w-3/12" />
         <p className="text-center text-sm text-white">
           &copy; {new Date().getFullYear()} The Infinity Solutions. All rights
