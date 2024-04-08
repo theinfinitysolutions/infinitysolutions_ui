@@ -9,12 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^11.0.24",
+    "framer-motion": "^11.0.25",
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@xpd/tailwind-3dtransforms": "^1.0.3",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
