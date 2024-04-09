@@ -38,3 +38,32 @@ body {
     text-wrap: balance;
   }
 }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    scale: 1 1.5;
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.circle {
+  height: 300px;
+  background: linear-gradient(
+    to right,
+    #0097b2, #043357);
+  aspect-ratio: 1;
+  position: absolute;
+  translate: -50% -50%;
+  border-radius: 50%;
+  position: fixed; 
+  pointer-events: none;
+  animation: rotate 10s infinite;
+  filter:blur(150px)
+}
+
