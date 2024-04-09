@@ -39,12 +39,24 @@ module.exports = {
             transform: "translate(0, 0)",
           },
         },
+        "radar-spin": {
+          from: {
+            transform: "rotate(20deg)",
+          },
+          to: {
+            transform: "rotate(380deg)",
+          },
+        },
       },
       animation: {
         rotate: "rotate 6s linear infinite",
         slideUp: "slideUp 1.5s ease-in-out forwards",
         textTransform: "textTransform 2s ease-in-out forwards",
         "text-reveal": "text-reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s",
+        "radar-spin": "radar-spin 4s linear infinite",
+      },
+      colors: {
+        primaryColor: "#0097b2",
       },
     },
   },
