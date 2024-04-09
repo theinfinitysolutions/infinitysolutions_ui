@@ -9,7 +9,7 @@ const navbarItems = [
 ];
 
 let navbarItemsClass =
-  "relative  text-[0.9em] py-2 px-3 after:block after:content-[''] cursor-pointer after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center";
+  "relative  text-[0.9em] py-2 px-3 after:block after:content-[''] cursor-pointer after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 ";
 
 const Navbar = () => {
   const router = useRouter();
