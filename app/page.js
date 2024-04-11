@@ -14,12 +14,14 @@ import { HiDocumentReport } from "react-icons/hi";
 import { RiFilePaper2Fill } from "react-icons/ri";
 import { serviceList } from "@/utils/consts";
 import PastWork from "@/components/pastwork";
+import ContactUs from "@/components/contactus";
 
 const text1 = "Infinite Possibilities, Infinite Solutions";
 const text2 = "Bringing the best technological solutions for your business.";
 
 const section2 = "Our Services";
 const section3 = "The Infinity Solutions";
+const section4 = "Contact Us";
 
 function debounce(func, timeout = 300) {
   let timer;
@@ -149,7 +151,15 @@ export default function Home() {
             >
               {showSideCard ? (
                 <div
-                  class={`[border-image:linear-gradient(to_right,#0087B2,#FFFFFF,#043357)_1] bg-primaryColor/10 overflow-hidden w-full min-h-[60vh] border-[2px] p-8 ${
+                  onMouseEnter={() => {
+                    setShowSideCard(true);
+                  }}
+                  onMouseLeave={() => {
+                    debounce(() => {
+                      setShowSideCard(false);
+                    }, 1000)();
+                  }}
+                  class={`[border-image:linear-gradient(to_right,#0087B2,#FFFFFF,#043357)_2] bg-primaryColor/10  w-full min-h-[60vh] border-[2px] p-8 ${
                     selectedHover > 0 || selectedHover < 10
                       ? "animate-slideUp"
                       : null
@@ -189,7 +199,14 @@ export default function Home() {
                 </div>
               ) : null}
             </div>
-            <div className="flex flex-col w-[40%] group items-center justify-center">
+            <div
+              onMouseLeave={() => {
+                debounce(() => {
+                  setShowSideCard(false);
+                }, 1000)();
+              }}
+              className="flex flex-col w-[40%] group items-center justify-center"
+            >
               {serviceList.map((item, index) => {
                 return (
                   <a
@@ -296,86 +313,7 @@ export default function Home() {
         </section>
       </RevealOnScroll>
       <PastWork />
-      <RevealOnScroll
-        threshold={0.65}
-        addedClasses={" w-full md:w-10/12 animate-slideUp"}
-      >
-        <section className="flex flex-col h-[90vh] w-full relative z-0 overflow-hidden">
-          <div className="flex flex-row w-full h-full justify-between items-center">
-            <div className="flex flex-col w-[40%] h-[80vh]  items-start justify-center">
-              <p className="text-white/90 text-2xl animate-slideUp">Why?</p>
-              <h1 className="text-[36px] text-start font-bold leading-[4rem] overflow-hidden text-[#0097b2]">
-                {section3.split("").map((char, index) => (
-                  <span
-                    className="animate-slideUp inline-block [animation-fill-mode:backwards]"
-                    key={`${char}-${index}`}
-                    style={{ animationDelay: `${index * 0.05}s` }}
-                  >
-                    {char === " " ? "\u00A0" : char}
-                  </span>
-                ))}
-              </h1>
-              <p className="text-[#c7c7c7aa] text-md mt-4 animate-slideUp delay-1000">
-                The Infinity Solutions is a technology company that provides
-                software development services to enterprises and startups. We
-                specialize in web and mobile app development, UI/UX design, and
-                server management.
-              </p>
-              <button className="bg-primaryColor text-white px-4 py-2 mt-8">
-                Contact Us
-              </button>
-            </div>
-            <div className="flex w-[60%] h-[80vh] relative flex-row justify-center items-center">
-              {/* <div className="absolute inset-0 h-full w-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#0097b222] via-[#0097b211] to-[#000000] "></div> */}
-              {/* <div className="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#80808022_1px,transparent_1px),linear-gradient(to_bottom,#80808022_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_90%,transparent_100%)]"></div> */}
-              <div className="flex flex-col mr-4 mt-[10vh]">
-                <div className="w-[30vh] h-[30vh] border-primaryColor/45 border-[1px] rounded-xl mb-4 animate-slideUpSmall flex flex-col justify-center items-start p-4">
-                  <h2 className="text-xl text-primaryColor">
-                    {"Tailored Solutions"}
-                  </h2>
-                  <p className="text-md mt-4 text-white/60">
-                    {
-                      "We prioritize understanding your needs to deliver customized, innovative solutions that drive business growth."
-                    }
-                  </p>
-                </div>
-                <div className="w-[30vh] h-[30vh] border-primaryColor/45 border-[1px] rounded-xl mb-4 animate-slideUpSmall flex flex-col justify-center items-start p-4">
-                  <h2 className="text-xl text-primaryColor">
-                    {"Comprehensive Expertise"}
-                  </h2>
-                  <p className="text-md mt-4 text-white/60">
-                    {
-                      "We excel in web, mobile, and custom software development, alongside robust data management solutions."
-                    }
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col -mt-[10vh]">
-                <div className="w-[30vh] h-[30vh] border-primaryColor/45 border-[1px] rounded-xl mb-4 animate-slideUpSmall flex flex-col justify-center items-start p-4">
-                  <h2 className="text-xl text-primaryColor">
-                    {"Cutting-Edge Solutions"}
-                  </h2>
-                  <p className="text-md mt-4 text-white/60">
-                    {
-                      "Our experienced team leverages the latest technologies to deliver solutions that exceed expectations."
-                    }
-                  </p>
-                </div>
-                <div className="w-[30vh] h-[30vh] border-primaryColor/45 border-[1px] rounded-xl mb-4 animate-slideUpSmall flex flex-col justify-center items-start p-4">
-                  <h2 className="text-xl text-primaryColor">
-                    {"Reliable Support"}
-                  </h2>
-                  <p className="text-md mt-4 text-white/60">
-                    {
-                      "Count on us for ongoing support and partnership, ensuring your software solutions evolve with your business."
-                    }
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </RevealOnScroll>
+      <ContactUs />
     </main>
   );
 }
