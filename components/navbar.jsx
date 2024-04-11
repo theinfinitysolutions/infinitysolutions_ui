@@ -13,12 +13,32 @@ let navbarItemsClass =
 
 const Navbar = () => {
   const router = useRouter();
+
+  const [scrollLength, setScrollLength] = React.useState(0);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrollLength(window.scrollY);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="bg-transparent h-[90px] flex flex-row w-full fixed top-0 px-[5%] pt-[2.5%] justify-between items-center z-10">
+    <div
+      className={`${
+        scrollLength > 100 ? "backdrop-blur-xl" : " 	bg-transparent"
+      } h-[120px] flex flex-row w-full fixed top-0 px-[5%] justify-between items-center z-10`}
+    >
       <div className="hidden md:flex flex-row justify-between w-[25%] items-center border-[1px] px-6  rounded-full py-1 shadow- shadow-[0_4px_24px_1px_rgba(0,151,178,0.2)] border-[#0097b255]">
         {/* <div className="w-8/12 flex flex-row justify-between items-center"> */}
         {navbarItems.map((item, index) => {
-          4;
           return (
             <a
               key={index}

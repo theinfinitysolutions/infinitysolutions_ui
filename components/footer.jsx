@@ -17,6 +17,7 @@ const navbarItems = [
 
 const Footer = () => {
   const router = useRouter();
+
   return (
     <footer className="bg-black w-screen text-white pb-4 bottom-0 z-[10]">
       <div></div>
