@@ -23,6 +23,11 @@ module.exports = {
 
           "100%": { opacity: 1, transform: "translateY(0)" },
         },
+        slideUpSmall: {
+          "0%": { opacity: 0, transform: "translateY(5vh)" },
+
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
         textTransform: {
           "0%": {
             transform: " translateZ(0px)  ",
@@ -51,6 +56,7 @@ module.exports = {
       animation: {
         rotate: "rotate 6s linear infinite",
         slideUp: "slideUp 1.5s ease-in-out forwards",
+        slideUpSmall: "slideUpSmall 0.5s ease-in-out forwards",
         textTransform: "textTransform 2s ease-in-out forwards",
         "text-reveal": "text-reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s",
         "radar-spin": "radar-spin 4s linear infinite",

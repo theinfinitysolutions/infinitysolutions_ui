@@ -64,6 +64,6 @@ body {
   position: fixed; 
   pointer-events: none;
   animation: rotate 10s infinite;
-  filter:blur(150px)
+  filter:blur(180px)
 }
 
