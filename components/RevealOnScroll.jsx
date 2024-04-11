@@ -1,7 +1,13 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 
-const RevealOnScroll = ({ children, addedClasses, threshold }) => {
+const RevealOnScroll = ({
+  children,
+  addedClasses,
+  threshold,
+  onReveal,
+  onHideDiv,
+}) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
@@ -26,6 +32,14 @@ const RevealOnScroll = ({ children, addedClasses, threshold }) => {
       }
     };
   }, []);
+
+  useEffect(() => {
+    if (isVisible && onReveal) {
+      onReveal();
+    } else if (!isVisible && onHideDiv) {
+      onHideDiv();
+    }
+  }, [isVisible]);
 
   const classes = `transition-opacity duration-1000 
         ${isVisible ? "opacity-100 " + addedClasses : "opacity-0"}`;
