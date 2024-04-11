@@ -176,7 +176,10 @@ export default function Home() {
                     {serviceList[selectedHover - 1]?.applications.map(
                       (item, index) => {
                         return (
-                          <div className="bg-[#383e48] py-3 flex justify-center items-center rounded-3xl">
+                          <div
+                            key={index}
+                            className="bg-[#383e48] py-3 flex justify-center items-center rounded-3xl"
+                          >
                             <p className="text-xs text-[#c7c7c7]">{item}</p>
                           </div>
                         );
@@ -187,7 +190,10 @@ export default function Home() {
                   <div className="flex flex-row overflow-scroll mt-2">
                     {[1, 2, 4, 5].map((item, index) => {
                       return (
-                        <div className="flex flex-col px-4 py-4 items-center border-[1px] rounded-xl mr-2 border-[#383e48]">
+                        <div
+                          key={index}
+                          className="flex flex-col px-4 py-4 items-center border-[1px] rounded-xl mr-2 border-[#383e48]"
+                        >
                           <div className="h-[10vh] w-[10vh] relative">
                             <Image src={"/nextjs.png"} layout="fill" />
                           </div>

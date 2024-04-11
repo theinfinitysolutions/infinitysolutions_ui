@@ -26,9 +26,9 @@ const ContactUs = () => {
               ))}
             </h1>
             <p className="text-lg text-white/60 mb-8 animate-slideUpSmall">
-              Have a question or want to discuss a project? We'd love to hear
-              from you. Fill out the form below and we'll get back to you within
-              4 hours.
+              {
+                "Have a question or want to discuss a project? We'd love to hear from you. Fill out the form below and we'll get back to you within 4 hours."
+              }
             </p>
           </div>
           <div className="flex flex-col w-[50%] items-end justify-center px-8">
