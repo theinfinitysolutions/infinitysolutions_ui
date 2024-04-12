@@ -32,7 +32,7 @@ const Footer = () => {
   const router = useRouter();
 
   return (
-    <footer className="w-screen relative bg-gradient-to-r from-[#04335733] to-[#0097b244] pb-4 flex flex-col items-center bottom-0 z-[10]">
+    <footer className="w-screen relative bg-black bg-gradient-to-r from-[#04335733] to-[#0097b244] pb-4 flex flex-col items-center bottom-0 z-[10]">
       <div className="flex flex-row justify-between w-full pl-[8vw] pr-[4vw] py-[10vh] ">
         <div className="flex flex-col justify-center  items-start w-[40vw]">
           <span className="text-xl md:text-[96px] text-start leading-[6rem] font-bold text-[#0097b2]">

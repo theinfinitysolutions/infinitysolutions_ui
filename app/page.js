@@ -159,7 +159,7 @@ export default function Home() {
                       setShowSideCard(false);
                     }, 1000)();
                   }}
-                  class={`[border-image:linear-gradient(to_right,#0087B2,#FFFFFF,#043357)_2] bg-primaryColor/10  w-full min-h-[60vh] border-[2px] p-8 ${
+                  class={`[border-image:linear-gradient(to_right,#0087B2,#FFFFFF,#043357)_2] bg-primaryColor/10  w-full min-h-[50vh] border-[2px] p-8 ${
                     selectedHover > 0 || selectedHover < 10
                       ? "animate-slideUp"
                       : null
@@ -171,7 +171,7 @@ export default function Home() {
                   <p className="text-md text-[#c7c7c7aa] mt-4 animate-slideUpSmall">
                     {serviceList[selectedHover - 1]?.description}
                   </p>
-                  <p className="text-primaryColor mt-8">Applications</p>
+                  <p className="text-primaryColor mt-4">Applications</p>
                   <div className="grid grid-cols-4 gap-x-2 gap-y-2 mt-2">
                     {serviceList[selectedHover - 1]?.applications.map(
                       (item, index) => {
@@ -186,7 +186,7 @@ export default function Home() {
                       }
                     )}
                   </div>
-                  <p className="text-primaryColor mt-8">Tech Stack</p>
+                  <p className="text-primaryColor mt-4">Tech Stack</p>
                   <div className="flex flex-row overflow-scroll mt-2">
                     {[1, 2, 4, 5].map((item, index) => {
                       return (
@@ -194,7 +194,7 @@ export default function Home() {
                           key={index}
                           className="flex flex-col px-4 py-4 items-center border-[1px] rounded-xl mr-2 border-[#383e48]"
                         >
-                          <div className="h-[10vh] w-[10vh] relative">
+                          <div className="h-[7.5vh] w-[7.5vh] relative">
                             <Image src={"/nextjs.png"} layout="fill" />
                           </div>
                           <p className="text-[#383e48] mt-2 text-md">Nextjs</p>
@@ -226,8 +226,8 @@ export default function Home() {
                     className="flex  text-[#fff] group-hover:text-[#c7c7c755]   justify-start w-full  border-b-[1px] border-[#ffffff22] hover:border-[#ffffff44] transition-all duration-300 ease-in-out"
                   >
                     <div className="hover:text-white flex group/text flex-row items-start space-x-4 py-1">
-                      <p className="text-[12px] ">0{index + 1}</p>
-                      <h1 className=" text-2xl group-hover/text:translate-x-[20px] duration-200">
+                      <p className="text-[0.75rem] ">0{index + 1}</p>
+                      <h1 className=" text-2xl leading-[1.25rem] group-hover/text:translate-x-[20px] duration-200">
                         {item.title}
                       </h1>
                     </div>
