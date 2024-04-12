@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 const navbarItems = [
-  { title: "Home", link: "#Home" },
-  { title: "Services", link: "#services" },
-  { title: "About Us", link: "#aboutus" },
+  { title: "Home", link: "/" },
+  { title: "Services", link: "/services" },
+  { title: "About Us", link: "/about" },
 ];
 
 let navbarItemsClass =
@@ -13,6 +13,7 @@ let navbarItemsClass =
 
 const Navbar = () => {
   const router = useRouter();
+  const pathname = usePathname();
 
   const [scrollLength, setScrollLength] = React.useState(0);
 
@@ -34,7 +35,7 @@ const Navbar = () => {
     <div
       className={`${
         scrollLength > 100 ? "backdrop-blur-xl" : " 	bg-transparent"
-      } h-[120px] flex flex-row w-full fixed top-0 px-[5%] justify-between items-center z-10`}
+      } h-[120px] flex flex-row max-w-screem w-full fixed top-0 px-[5%] justify-between items-center z-10`}
     >
       <div className="hidden md:flex flex-row justify-between w-[25%] bg-[#00000077] items-center border-[1px] px-6  rounded-full py-1 shadow- shadow-[0_4px_24px_1px_rgba(0,151,178,0.2)] border-[#0097b255]">
         {/* <div className="w-8/12 flex flex-row justify-between items-center"> */}
@@ -43,12 +44,12 @@ const Navbar = () => {
             <a
               key={index}
               onClick={() => {
-                //   window.scrollTo(item.link)
+                router.push(item.link);
               }}
               className={
                 `${navbarItemsClass}` +
                 `${
-                  index == 0
+                  pathname === item.link
                     ? " block border-[1px] border-[#0097b299] text-white bg-[#0097b255] rounded-full"
                     : " text-[#0097b2]"
                 }`
@@ -60,7 +61,7 @@ const Navbar = () => {
         })}
         {/* </div> */}
       </div>
-      <div className="flex flex-col justify-between items-center w-[20%]">
+      <div className="flex flex-col justify-between items-center w-[40%] md:w-[20%]">
         <span className="text-xl md:text-4xl font-bold text-[#0097b2] before:translate-z-[10rem]">
           The Infinity
         </span>
@@ -68,9 +69,9 @@ const Navbar = () => {
           Solutions
         </span>
       </div>
-      <div className="w-[25%]">
-        <div className=" flex max-w-lg items-center justify-end">
-          <div className="relative z-10 flex w-[10vw] cursor-pointer items-center overflow-hidden rounded-full border border-[#0097b255] p-[1.5px] shadow-[0_8px_48px_4px_rgba(0,151,178,0.2)]">
+      <div className="w-[50vw] md:w-[20%]">
+        <div className=" flex w-full md:max-w-lg items-center justify-end">
+          <div className="relative z-10 flex w-[40vw] md:w-[10vw] cursor-pointer items-center overflow-hidden rounded-full border border-[#0097b255] p-[1.5px] shadow-[0_8px_48px_4px_rgba(0,151,178,0.2)]">
             <div className=" animate-rotate absolute inset-0 h-full w-full rounded-full  bg-[conic-gradient(#0097b2_20deg,transparent_120deg)]"></div>
             <div className="relative z-20 flex flex-row justify-center w-full items-center rounded-full bg-black hover:bg-[#121212] px-4 py-2">
               <p className="relative z-50 w-full block rounded-lg border border-black bg-black  text-center text-sm text-white shadow-2xl transition duration-200">
