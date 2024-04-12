@@ -66,5 +66,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@xpd/tailwind-3dtransforms")],
+  plugins: [require("tailwindcss-3d")],
 };
