@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Cursor from "@/components/cursor";
 import { useEffect } from "react";
+import "normalize.css/normalize.css";
 
 const inter = Lora({ subsets: ["latin"] });
 

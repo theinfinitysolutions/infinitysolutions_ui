@@ -15,6 +15,7 @@ import { RiFilePaper2Fill } from "react-icons/ri";
 import { serviceList } from "@/utils/consts";
 import PastWork from "@/components/pastwork";
 import ContactUs from "@/components/contactus";
+import "normalize.css/normalize.css";
 
 const text1 = "Infinite Possibilities, Infinite Solutions";
 const text2 = "Bringing the best technological solutions for your business.";
