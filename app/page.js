@@ -46,10 +46,10 @@ export default function Home() {
         <section
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          className="flex flex-col h-[90vh] items-center justify-between w-full  relative z-0 overflow-hidden"
+          className="flex flex-col items-center justify-between w-full  relative z-0 overflow-hidden"
         >
-          <div className="flex flex-col w-[80vw] items-center mt-[10%]">
-            <h1 className="overflow-hidden text-[56px] text-center font-bold leading-[6rem] text-[#ffffffcc]">
+          <div className="flex flex-col w-[80vw] items-center mt-[7.5%]">
+            <h1 className="overflow-hidden text-[3rem] text-center font-bold leading-[3rem] text-[#ffffffcc]">
               {text1.split("").map((char, index) => (
                 <span
                   className="animate-slideUp inline-block [animation-fill-mode:backwards]"
@@ -60,7 +60,7 @@ export default function Home() {
                 </span>
               ))}
             </h1>
-            <h1 className="overflow-hidden text-[24px] text-center leading-[2rem] text-white">
+            <h1 className="overflow-hidden text-[1.5rem] text-center text-white">
               {text2}
             </h1>
           </div>
@@ -130,7 +130,7 @@ export default function Home() {
         <section
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          className="flex flex-col h-[90vh] w-full relative z-0 overflow-hidden"
+          className="flex flex-col w-full relative z-0 overflow-hidden"
         >
           <div className="flex flex-col  items-start mt-[5%]">
             <h1 className="overflow-hidden text-[48px] text-start font-bold leading-[6rem] text-[#0097b2]">
@@ -225,7 +225,7 @@ export default function Home() {
                     }}
                     className="flex  text-[#fff] group-hover:text-[#c7c7c755]   justify-start w-full  border-b-[1px] border-[#ffffff22] hover:border-[#ffffff44] transition-all duration-300 ease-in-out"
                   >
-                    <div className="hover:text-white flex group/text flex-row items-start space-x-4 py-4">
+                    <div className="hover:text-white flex group/text flex-row items-start space-x-4 py-1">
                       <p className="text-[12px] ">0{index + 1}</p>
                       <h1 className=" text-2xl group-hover/text:translate-x-[20px] duration-200">
                         {item.title}
@@ -240,9 +240,9 @@ export default function Home() {
       </RevealOnScroll>
       <RevealOnScroll
         threshold={0.65}
-        addedClasses={" w-full md:w-10/12 animate-slideUp"}
+        addedClasses={" w-full md:w-10/12 mt-[10vh] animate-slideUp"}
       >
-        <section className="flex flex-col h-[90vh] w-full relative z-0 overflow-hidden">
+        <section className="flex flex-col w-full relative z-0 overflow-hidden">
           <div className="flex flex-row w-full h-full justify-between items-center">
             <div className="flex flex-col w-[40%] h-[80vh]  items-start justify-center">
               <p className="text-white/90 text-2xl animate-slideUp">Why?</p>
