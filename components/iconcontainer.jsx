@@ -24,11 +24,13 @@ export const IconContainer = ({ icon, text, delay }) => {
         "relative z-50 flex flex-col items-center justify-center space-y-2"
       )}
     >
-      <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-primaryColor bg-[#0097b299] shadow-inner">
-        {icon || <HiDocumentText className="  h-8 w-8 text-[#0097b2]" />}
+      <div className="flex w-8 h-8 md:h-12 md:w-12 items-center justify-center rounded-2xl border border-primaryColor bg-[#0097b299] shadow-inner">
+        {icon || (
+          <HiDocumentText className="  w-4 h-4 md:h-8 md:w-8 text-[#0097b2]" />
+        )}
       </div>
-      <div className="hidden rounded-md px-2 py-1 md:block">
-        <div className="text-center text-xs font-bold text-slate-400">
+      <div className=" rounded-md px-2 py-1 md:block">
+        <div className="text-center text-[10px] md:text-xs font-bold text-slate-400">
           {text || `Web Development`}
         </div>
       </div>

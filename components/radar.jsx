@@ -1,10 +1,22 @@
 "use client";
-import React from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
 
 export const Radar = ({ className }) => {
   const circles = new Array(8).fill(1);
+  const [mobile, setMobile] = React.useState(false);
+
+  useLayoutEffect(() => {
+    let height = window.innerHeight;
+    let width = window.innerWidth;
+
+    if (height > width) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  });
   return (
     <div
       className={twMerge(
@@ -26,8 +38,8 @@ export const Radar = ({ className }) => {
       {circles.map((circle, idx) => (
         <Circle
           style={{
-            height: `${(idx + 1) * 6}rem`,
-            width: `${(idx + 1) * 6}rem`,
+            height: mobile ? `${(idx + 1) * 3}rem` : `${(idx + 1) * 6}rem`,
+            width: mobile ? `${(idx + 1) * 3}rem` : `${(idx + 1) * 6}rem`,
             border: `2px solid rgba(71, 85, 105, ${1 - (idx + 1) * 0.1})`,
           }}
           key={`motion-${idx}`}
