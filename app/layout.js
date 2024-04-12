@@ -17,13 +17,13 @@ const inter = Lora({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-black`}>
+      <body className={`${inter.className} bg-black max-w-screen`}>
         <Cursor />
         <Navbar />
         <div className="bg-black min-h-screen flex flex-col">
           {/* <div className="absolute flex flex-col w-full h-36 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#5581d466] via-[#5581d413] to-[#5581d400]"></div> */}
 
-          <div className="w-full mt-[90px]">{children}</div>
+          <div className="w-screen mt-[90px]">{children}</div>
         </div>
         <Footer />
       </body>
