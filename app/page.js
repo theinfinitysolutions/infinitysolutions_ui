@@ -15,6 +15,13 @@ import { RiFilePaper2Fill } from "react-icons/ri";
 import { serviceList } from "@/utils/consts";
 import PastWork from "@/components/pastwork";
 import ContactUs from "@/components/contactus";
+import { CgWebsite } from "react-icons/cg";
+import { FaMobile } from "react-icons/fa";
+import { SiBmcsoftware } from "react-icons/si";
+import { GiMining } from "react-icons/gi";
+import { SiAzurepipelines } from "react-icons/si";
+import { LuLayoutDashboard } from "react-icons/lu";
+import { MdOutlineManageAccounts } from "react-icons/md";
 
 const rotatingText = ["Possibilities", "Ideas", "Innovations", "Solutions"];
 const constantText = "Infinite";
@@ -26,6 +33,7 @@ const text2 = "Bringing the best technological solutions for your business.";
 const section2 = "Our Services";
 const section3 = "The Infinity Solutions";
 const section4 = "Contact Us";
+const iconClass = "w-4 h-4 md:h-8 md:w-8 text-primaryColor";
 
 function debounce(func, timeout = 300) {
   let timer;
@@ -132,40 +140,36 @@ export default function Home() {
               {text2}
             </h1>
           </div>
-          <div className="relative flex h-[50vh] w-10/12 mt-[4rem] flex-col items-center justify-center space-y-4 overflow-hidden px-4">
-            <div className="mx-auto w-full max-w-3xl">
+          <div className="relative flex h-[40vh] md:h-[50vh] w-10/12 mt-[4rem] flex-col items-center justify-center space-y-4 overflow-hidden px-4">
+            <div className="mx-auto w-full max-w-xl mt-[10vh] md:mt-0">
               <div className="flex w-full  items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
-                <IconContainer text="Web Development" delay={0.2} />
+                <IconContainer
+                  text="Web Development"
+                  icon={<CgWebsite className={iconClass} />}
+                  delay={0.2}
+                />
                 <IconContainer
                   delay={0.4}
                   text="Mobile apps"
-                  icon={
-                    <AiFillDollarCircle className=" h-8 w-8 text-primaryColor" />
-                  }
+                  icon={<FaMobile className={iconClass} />}
                 />
                 <IconContainer
-                  text="Designing"
+                  text="Custom Softwares"
                   delay={0.3}
-                  icon={
-                    <BsClipboardDataFill className=" h-8 w-8 text-primaryColor" />
-                  }
+                  icon={<SiBmcsoftware className={iconClass} />}
                 />
               </div>
             </div>
             <div className="mx-auto w-full max-w-md">
               <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
                 <IconContainer
-                  text="Maintenence"
+                  text="Data Mining"
                   delay={0.5}
-                  icon={
-                    <BiSolidReport className=" h-8 w-8 text-primaryColor" />
-                  }
+                  icon={<GiMining className={iconClass} />}
                 />
                 <IconContainer
-                  text="Server management"
-                  icon={
-                    <HiMiniDocumentArrowUp className=" h-8 w-8 text-primaryColor" />
-                  }
+                  text="ETL Pipelines"
+                  icon={<SiAzurepipelines className={iconClass} />}
                   delay={0.8}
                 />
               </div>
@@ -174,17 +178,13 @@ export default function Home() {
               <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
                 <IconContainer
                   delay={0.6}
-                  text="GitHub Integration"
-                  icon={
-                    <HiDocumentReport className=" h-8 w-8 text-primaryColor" />
-                  }
+                  text="Data Analytics"
+                  icon={<LuLayoutDashboard className={iconClass} />}
                 />
                 <IconContainer
                   delay={0.7}
-                  text="CMS Integration"
-                  icon={
-                    <RiFilePaper2Fill className=" h-8 w-8 text-primaryColor" />
-                  }
+                  text="ERP Development"
+                  icon={<MdOutlineManageAccounts className={iconClass} />}
                 />
               </div>
             </div>

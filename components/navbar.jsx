@@ -69,7 +69,7 @@ const Navbar = () => {
           Solutions
         </span>
       </div>
-      <div className="w-[40vw] md:w-[20%]">
+      <div className="w-[40vw] md:w-[25%]">
         <div className=" flex w-full md:max-w-lg items-center justify-end">
           <div className="relative z-10 flex w-[35vw] md:w-[10vw] cursor-pointer items-center overflow-hidden rounded-full border border-[#0097b255] p-[1.5px] shadow-[0_8px_48px_4px_rgba(0,151,178,0.2)]">
             <div className=" animate-rotate absolute inset-0 h-full w-full rounded-full  bg-[conic-gradient(#0097b2_20deg,transparent_120deg)]"></div>
