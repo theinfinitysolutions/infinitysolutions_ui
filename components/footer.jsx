@@ -45,7 +45,7 @@ const Footer = () => {
             Solutions
           </span>
         </div>
-        <div className="w-full lg:w-[50%] grid gap-y-8 grid-cols-2 md:flex md:flex-col justify-between mt-8 lg:mt-[5vh] mx-2">
+        <div className="w-full lg:w-[50%] grid gap-y-8 grid-cols-2 md:flex md:flex-row justify-between mt-8 lg:mt-[5vh] mx-2">
           <div className=" md:w-6/12 flex flex-col items-left">
             <h3 className="text-xl font-bold text-primaryColor">Quick Links</h3>
             <ul className="mt-2">
