@@ -89,6 +89,7 @@ export default function Home() {
                 {rotatingText.map((item, index) => {
                   return (
                     <motion.div
+                      key={index}
                       className="absolute left-0  "
                       animate={{
                         y:
