@@ -126,7 +126,7 @@ export default function Home() {
           </div>
         </section>
       </RevealOnScroll>
-      <RevealOnScroll threshold={0.55} addedClasses={" w-full md:w-10/12"}>
+      <RevealOnScroll threshold={0.35} addedClasses={" w-full md:w-10/12"}>
         <section
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
@@ -239,7 +239,7 @@ export default function Home() {
         </section>
       </RevealOnScroll>
       <RevealOnScroll
-        threshold={0.65}
+        threshold={0.35}
         addedClasses={" w-full md:w-10/12 mt-[10vh] animate-slideUp"}
       >
         <section className="flex flex-col w-full relative z-0 overflow-hidden">
@@ -267,11 +267,11 @@ export default function Home() {
                 Contact Us
               </button>
             </div>
-            <div className="flex w-[60%] h-[80vh] relative flex-row justify-center items-center">
+            <div className="flex w-[60%] h-[80vh] px-[10%] relative flex-row justify-center items-center">
               {/* <div className="absolute inset-0 h-full w-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#0097b222] via-[#0097b211] to-[#000000] "></div> */}
               {/* <div className="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#80808022_1px,transparent_1px),linear-gradient(to_bottom,#80808022_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_90%,transparent_100%)]"></div> */}
               <div className="flex flex-col mr-4 mt-[10vh]">
-                <div className="w-[30vh] h-[30vh] border-primaryColor/45 border-[1px] rounded-xl mb-4 animate-slideUpSmall flex flex-col justify-center items-start p-4">
+                <div className=" border-primaryColor/45 border-[1px] rounded-xl mb-4 animate-slideUpSmall flex flex-col justify-center items-start p-4">
                   <h2 className="text-lg text-primaryColor">
                     {"Tailored Solutions"}
                   </h2>
@@ -281,7 +281,7 @@ export default function Home() {
                     }
                   </p>
                 </div>
-                <div className="w-[30vh] h-[30vh] border-primaryColor/45 border-[1px] rounded-xl mb-4 animate-slideUpSmall flex flex-col justify-center items-start p-4">
+                <div className=" border-primaryColor/45 border-[1px] rounded-xl mb-4 animate-slideUpSmall flex flex-col justify-center items-start p-4">
                   <h2 className="text-lg text-primaryColor">
                     {"Comprehensive Expertise"}
                   </h2>
@@ -293,7 +293,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col -mt-[10vh]">
-                <div className="w-[30vh] h-[30vh] border-primaryColor/45 border-[1px] rounded-xl mb-4 animate-slideUpSmall flex flex-col justify-center items-start p-4">
+                <div className=" border-primaryColor/45 border-[1px] rounded-xl mb-4 animate-slideUpSmall flex flex-col justify-center items-start p-4">
                   <h2 className="text-lg text-primaryColor">
                     {"Cutting-Edge Solutions"}
                   </h2>
@@ -303,7 +303,7 @@ export default function Home() {
                     }
                   </p>
                 </div>
-                <div className="w-[30vh] h-[30vh] border-primaryColor/45 border-[1px] rounded-xl mb-4 animate-slideUpSmall flex flex-col justify-center items-start p-4">
+                <div className=" border-primaryColor/45 border-[1px] rounded-xl mb-4 animate-slideUpSmall flex flex-col justify-center items-start p-4">
                   <h2 className="text-lg text-primaryColor">
                     {"Reliable Support"}
                   </h2>
