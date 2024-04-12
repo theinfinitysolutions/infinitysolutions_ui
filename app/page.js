@@ -140,7 +140,7 @@ export default function Home() {
               {text2}
             </h1>
           </div>
-          <div className="relative flex h-[40vh] md:h-[50vh] w-10/12 mt-[4rem] flex-col items-center justify-center space-y-4 overflow-hidden px-4">
+          <div className="relative flex h-[50vh] md:h-[70vh] w-10/12 mt-[1rem] flex-col items-center justify-center space-y-4 overflow-hidden px-4">
             <div className="mx-auto w-full max-w-xl mt-[10vh] md:mt-0">
               <div className="flex w-full  items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
                 <IconContainer
@@ -160,7 +160,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="mx-auto w-full max-w-md">
+            <div className="mx-auto w-full max-w-sm">
               <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
                 <IconContainer
                   text="Data Mining"
@@ -174,7 +174,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="mx-auto w-full max-w-3xl">
+            <div className="mx-auto w-full max-w-xl">
               <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
                 <IconContainer
                   delay={0.6}
@@ -189,8 +189,8 @@ export default function Home() {
               </div>
             </div>
 
-            <Radar className="absolute -bottom-12" />
-            <div className="absolute bottom-0 z-[41] h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent" />
+            <Radar className="absolute" />
+            {/* <div className="absolute bottom-0 z-[41] h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent" /> */}
           </div>
         </section>
       </RevealOnScroll>
@@ -204,7 +204,7 @@ export default function Home() {
           className="flex flex-col w-10/12 md:w-[80vw] relative z-0 overflow-hidden"
         >
           <div className="flex flex-col  items-start mt-[5%]">
-            <h1 className="overflow-hidden text-[3rem] text3d text-center font-bold leading-[3rem] text-primaryColor">
+            <h1 className="overflow-hidden text-[2rem] md:text-[3rem] text3d text-center font-bold leading-[3rem] text-primaryColor">
               {section2.split("").map((char, index) => (
                 <span
                   className={`animate-slideUpSlow inline-block  [animation-fill-mode:backwards]`}
@@ -298,7 +298,7 @@ export default function Home() {
                   >
                     <div className="hover:text-white flex group/text flex-row items-start space-x-4 py-1">
                       <p className="text-[0.75rem] ">0{index + 1}</p>
-                      <h1 className=" text-2xl leading-[1.25rem] group-hover/text:translate-x-[20px] duration-200">
+                      <h1 className=" text-xl leading-[1.25rem] group-hover/text:translate-x-[20px] duration-200">
                         {item.title}
                       </h1>
                     </div>

@@ -109,7 +109,7 @@ const PastWork = () => {
         className="flex md:hidden  flex-col md:h-[150vh] w-full relative z-0 overflow-hidden px-[10vw]"
       >
         <div className="flex flex-col  items-start mt-[5%] ">
-          <h1 className="overflow-hidden text-[48px] text-start font-bold leading-[6rem] text-[#0097b2]">
+          <h1 className="overflow-hidden text-[2rem] md:text-[3rem] text-start font-bold leading-[6rem] text-[#0097b2]">
             {section2.split("").map((char, index) => (
               <span
                 className="animate-slideUpSlow inline-block [animation-fill-mode:backwards]"
