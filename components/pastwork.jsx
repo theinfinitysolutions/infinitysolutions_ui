@@ -112,7 +112,7 @@ const PastWork = () => {
           <h1 className="overflow-hidden text-[48px] text-start font-bold leading-[6rem] text-[#0097b2]">
             {section2.split("").map((char, index) => (
               <span
-                className="animate-slideUp inline-block [animation-fill-mode:backwards]"
+                className="animate-slideUpSlow inline-block [animation-fill-mode:backwards]"
                 key={`${char}-${index}`}
                 style={{ animationDelay: `${index * 0.05}s` }}
               >

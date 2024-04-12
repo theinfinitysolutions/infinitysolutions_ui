@@ -55,7 +55,8 @@ module.exports = {
       },
       animation: {
         rotate: "rotate 6s linear infinite",
-        slideUp: "slideUp 1.5s ease-in-out forwards",
+        slideUp: "slideUp 1s ease-in-out forwards",
+        slideUpSlow: "slideUp 2s ease-in-out forwards",
         slideUpSmall: "slideUpSmall 0.5s ease-in-out forwards",
         textTransform: "textTransform 2s ease-in-out forwards",
         "text-reveal": "text-reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s",

@@ -195,7 +195,7 @@ export default function Home() {
         </section>
       </RevealOnScroll>
       <RevealOnScroll
-        threshold={0.35}
+        threshold={mobile ? 1 : 0.35}
         addedClasses={" w-full flex flex-col items-center"}
       >
         <section
@@ -204,10 +204,10 @@ export default function Home() {
           className="flex flex-col w-10/12 md:w-[80vw] relative z-0 overflow-hidden"
         >
           <div className="flex flex-col  items-start mt-[5%]">
-            <h1 className="overflow-hidden text-[2rem] md:text-[3rem] text-start font-bold leading-[6rem] text-[#0097b2]">
+            <h1 className="overflow-hidden text-[3rem] text3d text-center font-bold leading-[3rem] text-primaryColor">
               {section2.split("").map((char, index) => (
                 <span
-                  className="animate-slideUp inline-block [animation-fill-mode:backwards]"
+                  className={`animate-slideUpSlow inline-block  [animation-fill-mode:backwards]`}
                   key={`${char}-${index}`}
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >

@@ -11,10 +11,10 @@ const ContactUs = () => {
           <div className="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#80808022_1px,transparent_1px),linear-gradient(to_bottom,#80808022_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
           <div className="flex flex-col w-full md:w-[50%] items-start justify-center px-8">
-            <h1 className="overflow-hidden text-[3rem] text-start font-bold leading-[3rem] text-[#0097b2]">
+            <h1 className="overflow-hidden text-[3rem] text-center font-bold leading-[3rem] text-primaryColor">
               {section4.split("").map((char, index) => (
                 <span
-                  className="animate-slideUp inline-block [animation-fill-mode:backwards]"
+                  className={`animate-slideUpSlow inline-block [animation-fill-mode:backwards]`}
                   key={`${char}-${index}`}
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
