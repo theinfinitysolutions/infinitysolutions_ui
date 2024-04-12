@@ -227,7 +227,7 @@ export default function Home() {
                   onMouseLeave={() => {
                     debounce(() => {
                       setShowSideCard(false);
-                    }, 1000)();
+                    }, 5000)();
                   }}
                   class={`[border-image:linear-gradient(to_right,#0087B2,#FFFFFF,#043357)_2] bg-primaryColor/10  w-full min-h-[50vh] border-[2px] p-8 ${
                     selectedHover > 0 || selectedHover < 10
@@ -258,29 +258,29 @@ export default function Home() {
                   </div>
                   <p className="text-primaryColor mt-4">Tech Stack</p>
                   <div className="flex flex-row overflow-scroll mt-2">
-                    {[1, 2, 4, 5].map((item, index) => {
-                      return (
-                        <div
-                          key={index}
-                          className="flex flex-col px-4 py-4 items-center border-[1px] rounded-xl mr-2 border-[#383e48]"
-                        >
-                          <div className="h-[7.5vh] w-[7.5vh] relative">
-                            <Image src={"/nextjs.png"} layout="fill" />
+                    {serviceList[selectedHover - 1].techStack.map(
+                      (item, index) => {
+                        return (
+                          <div
+                            key={index}
+                            className="flex flex-col px-4 py-4 items-center border-[1px] rounded-xl mr-2 border-[#383e48]"
+                          >
+                            <div className="h-[7.5vh] w-[7.5vh] relative">
+                              <Image src={item.image} layout="fill" />
+                            </div>
+                            <p className="text-[#383e48] mt-2 text-md">
+                              {item.title}
+                            </p>
                           </div>
-                          <p className="text-[#383e48] mt-2 text-md">Nextjs</p>
-                        </div>
-                      );
-                    })}
+                        );
+                      }
+                    )}
                   </div>
                 </div>
               ) : null}
             </div>
             <div
-              onMouseLeave={() => {
-                debounce(() => {
-                  setShowSideCard(false);
-                }, 1000)();
-              }}
+              onMouseLeave={() => {}}
               className="flex flex-col w-full md:w-[40%] group items-center justify-center"
             >
               {serviceList.map((item, index) => {

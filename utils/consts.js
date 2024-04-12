@@ -11,7 +11,32 @@ export const serviceList = [
       "Responsive Web Design",
       "Single Page Application",
     ],
-    techStack: "",
+    techStack: [
+      {
+        image: "/django.png",
+        title: "Django",
+      },
+      {
+        image: "/nextjs.png",
+        title: "Nextjs",
+      },
+      {
+        image: "/nodejs.png",
+        title: "Node.js",
+      },
+      {
+        image: "/postgresql.png",
+        title: "PostgreSQL",
+      },
+      {
+        image: "/react.png",
+        title: "Reactjs",
+      },
+      {
+        image: "/vuejs.png",
+        title: "Vuejs",
+      },
+    ],
   },
   {
     title: "Mobile App Development",
@@ -24,14 +49,56 @@ export const serviceList = [
       "React Native App",
       "Flutter App",
     ],
-    techStack: "",
+    techStack: [
+      {
+        image: "/flutter.png",
+        title: "Flutter",
+      },
+      {
+        image: "/react.png",
+        title: "React Native",
+      },
+      {
+        image: "/swift.png",
+        title: "Swift",
+      },
+      {
+        image: "/android.png",
+        title: "Android",
+      },
+    ],
   },
   {
     title: "Custom Software Development",
     description:
       "Developing bespoke software solutions to address unique business challenges with precision and scalability.",
     applications: ["Enterprise Software", "CRM System", "Workflow Automation"],
-    techStack: "",
+    techStack: [
+      {
+        image: "/django.png",
+        title: "Django",
+      },
+      {
+        image: "/nextjs.png",
+        title: "Nextjs",
+      },
+      {
+        image: "/nodejs.png",
+        title: "Node.js",
+      },
+      {
+        image: "/postgresql.png",
+        title: "PostgreSQL",
+      },
+      {
+        image: "/react.png",
+        title: "Reactjs",
+      },
+      {
+        image: "/vuejs.png",
+        title: "Vuejs",
+      },
+    ],
   },
   {
     title: "Data Mining",
@@ -42,14 +109,44 @@ export const serviceList = [
       "Predictive Analytics",
       "Fraud Detection",
     ],
-    techStack: "",
+    techStack: [
+      {
+        image: "/django.png",
+        title: "Django",
+      },
+      {
+        image: "/nextjs.png",
+        title: "Nextjs",
+      },
+      {
+        image: "/nodejs.png",
+        title: "Node.js",
+      },
+      {
+        image: "/react.png",
+        title: "Reactjs",
+      },
+      {
+        image: "/vuejs.png",
+        title: "Vuejs",
+      },
+    ],
   },
   {
     title: "ETL and Data Pipelines",
     description:
       "Designing efficient Extract, Transform, Load processes to streamline data integration and maintain data integrity.",
     applications: ["Data Integration", "Data Warehousing", "Data Migration"],
-    techStack: "",
+    techStack: [
+      {
+        image: "/jupyter.png",
+        title: "Jupyter Notebook",
+      },
+      {
+        image: "/pandas.png",
+        title: "Pandas",
+      },
+    ],
   },
   {
     title: "Data Analytics and Dashboards",
@@ -60,7 +157,16 @@ export const serviceList = [
       "Data Visualization",
       "Performance Monitoring",
     ],
-    techStack: "",
+    techStack: [
+      {
+        image: "/jupyter.png",
+        title: "Jupyter Notebook",
+      },
+      {
+        image: "/pandas.png",
+        title: "Pandas",
+      },
+    ],
   },
   {
     title: "ERP Development",
@@ -71,6 +177,15 @@ export const serviceList = [
       "Supply Chain Management",
       "Financial Management",
     ],
-    techStack: "",
+    techStack: [
+      {
+        image: "/jupyter.png",
+        title: "Jupyter Notebook",
+      },
+      {
+        image: "/pandas.png",
+        title: "Pandas",
+      },
+    ],
   },
 ];
