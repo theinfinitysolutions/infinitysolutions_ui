@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --variable-color: #0097b2; /* Added variable */
 }
 
 *{
@@ -25,6 +26,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  scroll-behavior:smooth;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -67,3 +69,27 @@ body {
   filter:blur(180px)
 }
 
+.outline-title {
+  color: #fff;
+     text-shadow:
+         0.1rem 0.1rem 0 var(--variable-color),
+       -0.1rem -0.1rem 0 var(--variable-color),
+        0.1rem -0.1rem 0 var(--variable-color),
+        -0.1rem 0.1rem 0 var(--variable-color),
+         0.1rem 0.1rem 0 var(--variable-color);
+        font-size: 4rem;
+  }
+
+@keyframes rotateAll {
+  from {
+    transform: rotateX(80deg) scale(0.7) translateY(100px) translateZ(50vh);
+  }
+
+  to {
+    transform: rotateX(0deg) scale(1) translateY(0px) translateZ(0px);
+  }
+}
+
+.text3d {
+  animation: rotateAll 2000ms ease-in-out; 
+}
