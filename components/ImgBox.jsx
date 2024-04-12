@@ -6,7 +6,7 @@ const ImgBox = ({ image, title, link }) => {
   return (
     <div className="flex h-full w-full relative group z-0 flex-col justify-center items-center overflow-hidden rounded-md">
       <Image layout="fill" src={image} className="-z-10" />
-      <div className="hidden w-full h-full group-hover:flex group-hover:bg-black/60 group-hover:animate-slideUpSmall flex-col items-center justify-center">
+      <div className=" md:hidden flex w-full h-full bg-black/60  md:group-hover:flex md:group-hover:bg-black/60 md:group-hover:animate-slideUpSmall flex-col items-center justify-center">
         <p className=" text-white text-lg">{title}</p>
         <a
           onClick={() => {

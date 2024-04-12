@@ -23,7 +23,7 @@ const PastWork = () => {
         onMouseLeave={() => {
           setFixed(false);
         }}
-        className="flex flex-col h-[150vh] w-full relative z-0 overflow-hidden px-[10vw]"
+        className="hidden md:flex flex-col h-[150vh] w-full relative z-0 overflow-hidden px-[10vw]"
       >
         <div
           id="section1"
@@ -96,6 +96,59 @@ const PastWork = () => {
             image={"/acemobile.jpeg"}
             title="Ace Resumes"
             link={"http://144.24.111.231:7003/"}
+          />
+        </div>
+      </section>
+      <section
+        onMouseEnter={() => {
+          setFixed(true);
+        }}
+        onMouseLeave={() => {
+          setFixed(false);
+        }}
+        className="flex md:hidden  flex-col md:h-[150vh] w-full relative z-0 overflow-hidden px-[10vw]"
+      >
+        <div className="flex flex-col  items-start mt-[5%] ">
+          <h1 className="overflow-hidden text-[48px] text-start font-bold leading-[6rem] text-[#0097b2]">
+            {section2.split("").map((char, index) => (
+              <span
+                className="animate-slideUp inline-block [animation-fill-mode:backwards]"
+                key={`${char}-${index}`}
+                style={{ animationDelay: `${index * 0.05}s` }}
+              >
+                {char === " " ? "\u00A0" : char}
+              </span>
+            ))}
+          </h1>
+        </div>
+
+        <div className="  h-[30vh] w-full mb-8  top-[40vh] -z-0">
+          <ImgBox
+            image={"/aceresumes.png"}
+            title="Ace Resumes"
+            link={"http://144.24.111.231:7003/"}
+          />
+        </div>
+
+        <div className="h-[30vh] w-full mb-8 right-[50vh] top-[100vh] -z-0">
+          <ImgBox
+            image={"/mahakali.png"}
+            link="https://mahakalisarees.com/"
+            title="Mahakali Sarees"
+          />
+        </div>
+        <div className="h-[30vh] w-full mb-8 left-[15vh] top-[120vh] -z-0">
+          <ImgBox
+            image={"/sgt.png"}
+            link="https://www.shreegovindtourism.com/"
+            title="Shree Govind Tourism"
+          />
+        </div>
+        <div className=" h-[30vh] w-full mb-8 left-[10vh] top-[30vh] -z-0">
+          <ImgBox
+            image={"/raksheet.png"}
+            link="http://144.24.111.231:7005/home"
+            title="Raksheet Hospital"
           />
         </div>
       </section>
