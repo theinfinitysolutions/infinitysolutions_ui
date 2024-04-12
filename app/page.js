@@ -315,8 +315,10 @@ export default function Home() {
         <section className="flex flex-col w-full relative z-0 overflow-hidden">
           <div className="flex flex-col md:flex-row w-full h-full justify-between items-center">
             <div className="flex flex-col w-full md:w-[40%] md:h-[80vh]  items-start justify-center">
-              <p className="text-white/90 text-2xl animate-slideUp">Why?</p>
-              <h1 className="text-[2rem] text-start font-bold leading-[2rem] overflow-hidden text-[#0097b2]">
+              <p className="text-white/90 text-xl md:text-2xl animate-slideUp">
+                Why?
+              </p>
+              <h1 className=" text-[1.5rem] md:text-[2rem] text-start font-bold leading-[2rem] overflow-hidden text-[#0097b2]">
                 {section3.split("").map((char, index) => (
                   <span
                     className="animate-slideUp inline-block [animation-fill-mode:backwards]"
