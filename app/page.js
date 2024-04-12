@@ -246,7 +246,7 @@ export default function Home() {
           <div className="flex flex-row w-full h-full justify-between items-center">
             <div className="flex flex-col w-[40%] h-[80vh]  items-start justify-center">
               <p className="text-white/90 text-2xl animate-slideUp">Why?</p>
-              <h1 className="text-[36px] text-start font-bold leading-[4rem] overflow-hidden text-[#0097b2]">
+              <h1 className="text-[2rem] text-start font-bold leading-[2rem] overflow-hidden text-[#0097b2]">
                 {section3.split("").map((char, index) => (
                   <span
                     className="animate-slideUp inline-block [animation-fill-mode:backwards]"
@@ -257,7 +257,7 @@ export default function Home() {
                   </span>
                 ))}
               </h1>
-              <p className="text-[#c7c7c7aa] text-md mt-4 animate-slideUp delay-1000">
+              <p className="text-[#c7c7c7aa] text-md animate-slideUp delay-1000">
                 The Infinity Solutions is a technology company that provides
                 software development services to enterprises and startups. We
                 specialize in web and mobile app development, UI/UX design, and
@@ -272,20 +272,20 @@ export default function Home() {
               {/* <div className="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#80808022_1px,transparent_1px),linear-gradient(to_bottom,#80808022_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_90%,transparent_100%)]"></div> */}
               <div className="flex flex-col mr-4 mt-[10vh]">
                 <div className="w-[30vh] h-[30vh] border-primaryColor/45 border-[1px] rounded-xl mb-4 animate-slideUpSmall flex flex-col justify-center items-start p-4">
-                  <h2 className="text-xl text-primaryColor">
+                  <h2 className="text-lg text-primaryColor">
                     {"Tailored Solutions"}
                   </h2>
-                  <p className="text-md mt-4 text-white/60">
+                  <p className="text-sm mt-4 text-white/60">
                     {
                       "We prioritize understanding your needs to deliver customized, innovative solutions that drive business growth."
                     }
                   </p>
                 </div>
                 <div className="w-[30vh] h-[30vh] border-primaryColor/45 border-[1px] rounded-xl mb-4 animate-slideUpSmall flex flex-col justify-center items-start p-4">
-                  <h2 className="text-xl text-primaryColor">
+                  <h2 className="text-lg text-primaryColor">
                     {"Comprehensive Expertise"}
                   </h2>
-                  <p className="text-md mt-4 text-white/60">
+                  <p className="text-sm mt-4 text-white/60">
                     {
                       "We excel in web, mobile, and custom software development, alongside robust data management solutions."
                     }
@@ -294,20 +294,20 @@ export default function Home() {
               </div>
               <div className="flex flex-col -mt-[10vh]">
                 <div className="w-[30vh] h-[30vh] border-primaryColor/45 border-[1px] rounded-xl mb-4 animate-slideUpSmall flex flex-col justify-center items-start p-4">
-                  <h2 className="text-xl text-primaryColor">
+                  <h2 className="text-lg text-primaryColor">
                     {"Cutting-Edge Solutions"}
                   </h2>
-                  <p className="text-md mt-4 text-white/60">
+                  <p className="text-sm mt-4 text-white/60">
                     {
                       "Our experienced team leverages the latest technologies to deliver solutions that exceed expectations."
                     }
                   </p>
                 </div>
                 <div className="w-[30vh] h-[30vh] border-primaryColor/45 border-[1px] rounded-xl mb-4 animate-slideUpSmall flex flex-col justify-center items-start p-4">
-                  <h2 className="text-xl text-primaryColor">
+                  <h2 className="text-lg text-primaryColor">
                     {"Reliable Support"}
                   </h2>
-                  <p className="text-md mt-4 text-white/60">
+                  <p className="text-sm mt-4 text-white/60">
                     {
                       "Count on us for ongoing support and partnership, ensuring your software solutions evolve with your business."
                     }
