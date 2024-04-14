@@ -83,7 +83,7 @@ export default function Home() {
         <section
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          className="flex flex-col items-center justify-between w-full  relative z-0 overflow-hidden"
+          className="flex flex-col items-center justify-between w-full  relative z-0 "
         >
           <div className="flex flex-col w-10/12 md:w-[80vw] items-start md:items-center mt-[7.5%]">
             <div className="flex flex-row items-start mt-8 md:mt-0 md:items-center justify-between mr-[30vw] md:mr-64 text3d md:-ml-[3vw]">
@@ -140,8 +140,8 @@ export default function Home() {
               {text2}
             </h1>
           </div>
-          <div className="relative flex h-[50vh] md:h-[70vh] w-10/12 mt-[1rem] flex-col items-center justify-center space-y-4 overflow-hidden px-4">
-            <div className="mx-auto w-full max-w-xl mt-[10vh] md:mt-0">
+          <div className="relative flex h-[50vh] md:h-[65vh] 2xl:-[60vh] w-10/12 flex-col items-center justify-center space-y-4  px-4">
+            <div className="mx-auto w-full max-w-xl mt-[10vh] md:mt-[5vh]">
               <div className="flex w-full  items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
                 <IconContainer
                   text="Web Development"
@@ -189,7 +189,7 @@ export default function Home() {
               </div>
             </div>
 
-            <Radar className="absolute" />
+            <Radar className="absolute md:-bottom-12 2xl:-bottom-8" />
             {/* <div className="absolute bottom-0 z-[41] h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent" /> */}
           </div>
         </section>
@@ -201,9 +201,9 @@ export default function Home() {
         <section
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          className="flex flex-col w-10/12 md:w-[80vw] relative z-0 overflow-hidden"
+          className="  relative flex flex-col w-10/12 md:w-[80vw] z-0 overflow-hidden"
         >
-          <div className="flex flex-col  items-start mt-[5%]">
+          <div className="flex flex-col  items-start">
             <h1 className="overflow-hidden text-[2rem] md:text-[3rem] text3d text-center font-bold leading-[3rem] text-primaryColor">
               {section2.split("").map((char, index) => (
                 <span

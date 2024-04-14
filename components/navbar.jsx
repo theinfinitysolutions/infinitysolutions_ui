@@ -35,9 +35,9 @@ const Navbar = () => {
     <div
       className={`${
         scrollLength > 100 ? "backdrop-blur-xl" : " 	bg-transparent"
-      } h-[120px] flex flex-row max-w-screem w-full fixed top-0 px-[5%] justify-between items-center z-10`}
+      } h-[120px] flex flex-row max-w-screem w-full fixed top-0 px-[5%] 2xl:px-[10%] justify-between items-center z-10`}
     >
-      <div className="hidden md:flex flex-row justify-between w-[25%] bg-[#00000077] items-center border-[1px] px-6  rounded-full py-1 shadow- shadow-[0_4px_24px_1px_rgba(0,151,178,0.2)] border-[#0097b255]">
+      <div className="hidden md:flex flex-row justify-between w-[25%] 2xl:w-[20%] bg-[#00000077] items-center border-[1px] px-6  rounded-full py-1 shadow- shadow-[0_4px_24px_1px_rgba(0,151,178,0.2)] border-[#0097b255]">
         {/* <div className="w-8/12 flex flex-row justify-between items-center"> */}
         {navbarItems.map((item, index) => {
           return (
@@ -69,7 +69,7 @@ const Navbar = () => {
           Solutions
         </span>
       </div>
-      <div className="w-[40vw] md:w-[25%]">
+      <div className="w-[40vw] md:w-[25%] 2xl:w-[20%]">
         <div className=" flex w-full md:max-w-lg items-center justify-end">
           <div className="relative z-10 flex w-[35vw] md:w-[10vw] cursor-pointer items-center overflow-hidden rounded-full border border-[#0097b255] p-[1.5px] shadow-[0_8px_48px_4px_rgba(0,151,178,0.2)]">
             <div className=" animate-rotate absolute inset-0 h-full w-full rounded-full  bg-[conic-gradient(#0097b2_20deg,transparent_120deg)]"></div>

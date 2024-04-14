@@ -40,7 +40,7 @@ export const Radar = ({ className }) => {
           style={{
             height: mobile ? `${(idx + 1) * 3}rem` : `${(idx + 1) * 6}rem`,
             width: mobile ? `${(idx + 1) * 3}rem` : `${(idx + 1) * 6}rem`,
-            border: `2px solid rgba(71, 85, 105, ${1 - (idx + 1) * 0.1})`,
+            border: `2px solid rgba(71, 85, 105, ${1 - (idx + 1) * 0.075})`,
           }}
           key={`motion-${idx}`}
           idx={idx}
