@@ -27,6 +27,22 @@ const ContactUs = () => {
                 "Have a question or want to discuss a project? We'd love to hear from you. Fill out the form below and we'll get back to you within 4 hours."
               }
             </p>
+            {/* <div className="flex w-full flex-row justify-between bg-primaryColor/50 px-4 py-2 mt-8 rounded-xl">
+              <div className="flex flex-col ">
+                <p className="text-md mb-1">Email</p>
+                <p className="flex text-xs">
+                  {"raman@theinfinitysolutions.net "}
+                </p>
+                <p className="flex text-xs">
+                  {"eklavaya@theinfinitysolutions.net "}
+                </p>
+              </div>
+              <div className="flex flex-col ">
+                <p className="text-md mb-1">Phone Number</p>
+                <p className="flex text-xs">{"+91-8233842323"}</p>
+                <p className="flex text-xs">{"+91-9784450222"}</p>
+              </div>
+            </div> */}
           </div>
           <div className="flex flex-col w-full md:w-[50%] items-center md:items-end justify-center px-0 md:px-8 my-[7.5vh]">
             <div className="flex flex-col w-10/12 space-y-4 animate-slideUpSmall">

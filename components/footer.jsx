@@ -13,11 +13,9 @@ let footerItemsClass =
 
 const navbarItems = [
   { title: "Home", link: "/home" },
-  { title: "About Us", link: "/about" },
   { title: "Services", link: "/services" },
-  { title: "Consultant's Desk", link: "/consultant" },
-  { title: "Blogs", link: "/blogs" },
-  { title: "Contact Us", link: "/contactus" },
+  { title: "Projects", link: "/projects" },
+  { title: "About Us", link: "/about" },
 ];
 
 const websitePolicies = [

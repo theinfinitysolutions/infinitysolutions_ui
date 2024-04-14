@@ -28,7 +28,7 @@ const Projects = () => {
             </p>
             <p className="text-primaryColor ml-4 mr-[5vw] text-sm md:text-lg">
               {" "}
-              {projects[currentProject % projects.length]?.title}
+              {projects[(currentProject + 1) % projects.length]?.title}
             </p>
             <motion.div
               initial={{ x: -40 }}
@@ -67,20 +67,24 @@ const Projects = () => {
             </p>
             <div className="flex flex-row mt-[10%] justify-between">
               <div className="flex flex-col justify-center items-start">
-                <p className="text-sm text-primaryColor">TYPE:</p>
-                <p className="text-xl text-primaryText mt-2">
+                <p className=" text-xs md:text-sm text-primaryColor">TYPE:</p>
+                <p className=" text-md md:text-xl text-primaryText mt-2">
                   {projects[currentProject].type}
                 </p>
               </div>
               <div className="flex flex-col justify-center items-start">
-                <p className="text-sm text-primaryColor">INDUSTRY:</p>
-                <p className="text-xl text-primaryText mt-2">
+                <p className=" text-xs md:text-sm text-primaryColor">
+                  INDUSTRY:
+                </p>
+                <p className="text-md md:text-xl text-primaryText mt-2">
                   {projects[currentProject].industry}
                 </p>
               </div>
               <div className="flex flex-col justify-center items-start">
-                <p className="text-sm text-primaryColor">LOCATION:</p>
-                <p className="text-xl text-primaryText mt-2">
+                <p className=" text-xs md:text-sm text-primaryColor">
+                  LOCATION:
+                </p>
+                <p className=" text-md md:text-xl text-primaryText mt-2">
                   {projects[currentProject].location}
                 </p>
               </div>
