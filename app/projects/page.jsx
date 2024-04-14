@@ -16,15 +16,17 @@ const Projects = () => {
       <div className="absolute z-100 flex flex-col w-full top-0 h-72 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#0097b244] via-[#0097b211] to-[#0097b200] "></div>
       <div className="absolute z-0 inset-0 h-full to-0 w-full bg-transparent bg-[linear-gradient(to_right,#80808022_1px,transparent_1px),linear-gradient(to_bottom,#80808022_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_40%,#000_60%,transparent_100%)]"></div>
       <div className="flex flex-col z-0 w-10/12">
-        <div className="flex flex-row justify-end mt-[10vh]">
+        <div className="flex flex-row justify-end mt-[12.5vh] md:mt-[10vh]">
           <a
             onClick={() => {
               setCurrentProject((currentProject + 1) % projects.length);
             }}
-            className="flex flex-row items-center cursor-pointer"
+            className=" hidden md:flex flex-row items-center cursor-pointer"
           >
-            <p className="text-primaryText text-lg">Next Project :</p>
-            <p className="text-primaryColor ml-4 mr-[5vw] text-lg">
+            <p className="text-primaryText text-sm md:text-lg">
+              Next Project :
+            </p>
+            <p className="text-primaryColor ml-4 mr-[5vw] text-sm md:text-lg">
               {" "}
               {projects[currentProject % projects.length]?.title}
             </p>
@@ -39,12 +41,24 @@ const Projects = () => {
                 ease: "easeOut",
               }}
             >
-              <HiArrowLongRight className="text-primaryText text-[2rem]" />
+              <HiArrowLongRight className="text-primaryText text-md md:text-[2rem]" />
             </motion.div>
+          </a>
+          <a
+            onClick={() => {
+              setCurrentProject((currentProject + 1) % projects.length);
+            }}
+            className=" md:hidden flex flex-row items-center cursor-pointer"
+          >
+            <p className="text-primaryText mx-2 text-sm md:text-lg">
+              Next Project
+            </p>
+
+            <HiArrowLongRight className="text-primaryText text-md md:text-[2rem]" />
           </a>
         </div>
         <div className="flex flex-col md:flex-row justify-between items-start w-full mt-[2.5%]">
-          <div className="flex flex-col justify-center w-full md:w-4/12 mt-4">
+          <div className="flex flex-col justify-center w-full md:w-4/12 mt-8 md:mt-4">
             <p className="text-[2rem] text-primaryColor">
               {projects[currentProject].title}
             </p>
@@ -80,8 +94,12 @@ const Projects = () => {
                       key={index}
                       className="flex flex-col px-4 py-4 items-center border-[1px] rounded-xl mr-2 border-[#666666]"
                     >
-                      <div className="h-[7.5vh] w-[7.5vh] relative">
-                        <Image src={item.image} layout="fill" />
+                      <div className=" h-[5vh] w-[5vh] md:h-[7.5vh] md:w-[7.5vh] relative">
+                        <Image
+                          src={item.image}
+                          objectFit="contain"
+                          layout="fill"
+                        />
                       </div>
                       <p className="text-[#666666] mt-2 text-md">
                         {item.title}
@@ -102,25 +120,25 @@ const Projects = () => {
               </button>
             </div>
           </div>
-          <div className="flex relative w-full md:w-7/12 h-[50vh]">
+          <div className="flex relative w-full md:w-7/12 h-[30vh] md:h-[50vh]">
             <Image
               src={projects[currentProject].image}
               alt={projects[currentProject].title}
               layout="fill"
-              objectFit="cover"
+              objectFit={"contain"}
               className="rounded-xl border-[1px] p-2 border-primaryColor"
             />
           </div>
         </div>
         <RevealOnScroll
           threshold={0.5}
-          addedClasses={" animate-slideUp mt-[15vh] px-[10vw] "}
+          addedClasses={" animate-slideUp mt-[5vh] md:px-[10vw] "}
         >
           <div className="circle2 left-1/2 top-1/3 -z-10"></div>
           <div className="flex flex-col items-center text-center my-[10vh] md:px-[10vw]">
             <p className="text-3xl text-primaryText">Testimonial</p>
 
-            <p className="text-xl text-primaryText my-[5vh]">
+            <p className="text-lg md:text-xl text-primaryText my-[5vh]">
               {projects[currentProject % projects.length]?.testimonial.message}
             </p>
             <p className="text-lg text-primaryText">
@@ -135,7 +153,7 @@ const Projects = () => {
           </div>
         </RevealOnScroll>
         <div className="flex flex-col justify-center items-center my-[10vh]">
-          <p className="text-2xl">
+          <p className="text-sm text-center md:text-2xl">
             {
               "Like our work ? , reach out to us and let us build the best solution for your product"
             }
