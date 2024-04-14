@@ -22,7 +22,7 @@ const ContactUs = () => {
                 </span>
               ))}
             </h1>
-            <p className="text-lg text-white/60 animate-slideUpSmall">
+            <p className="text-lg text-primaryText/60 animate-slideUpSmall">
               {
                 "Have a question or want to discuss a project? We'd love to hear from you. Fill out the form below and we'll get back to you within 4 hours."
               }
@@ -31,41 +31,41 @@ const ContactUs = () => {
           <div className="flex flex-col w-full md:w-[50%] items-center md:items-end justify-center px-0 md:px-8 my-[7.5vh]">
             <div className="flex flex-col w-10/12 space-y-4 animate-slideUpSmall">
               <div className="flex flex-col items-start">
-                <label className="text-white/80">Name</label>
+                <label className="text-primaryText/60">Name</label>
                 <input
                   type="text"
                   placeholder="Name"
-                  className="w-full px-4 py-2 bg-transparent border border-white/30 rounded-md text-white/80 focus:outline-none focus:border-primaryColor"
+                  className="w-full px-4 py-2 bg-transparent border border-white/30 rounded-md text-primaryText focus:outline-none focus:border-primaryColor"
                   label="Name"
                 />
               </div>
               <div className="flex flex-col items-start">
-                <label className="text-white/80">Email</label>
+                <label className="text-primaryText/60">Email</label>
                 <input
                   type="email"
                   placeholder="Email"
-                  className="w-full px-4 py-2 bg-transparent border border-white/30 rounded-md text-white/80 focus:outline-none focus:border-primaryColor"
+                  className="w-full px-4 py-2 bg-transparent border border-white/30 rounded-md text-primaryText focus:outline-none focus:border-primaryColor"
                   label="Email"
                 />
               </div>
               <div className="flex flex-col items-start">
-                <label className="text-white/80">Phone Number</label>
+                <label className="text-primaryText/60">Phone Number</label>
                 <input
                   type="phoneNumber"
                   placeholder="Phone Number"
-                  className="w-full px-4 py-2 bg-transparent border border-white/30 rounded-md text-white/80 focus:outline-none focus:border-primaryColor"
+                  className="w-full px-4 py-2 bg-transparent border border-white/30 rounded-md text-primaryText focus:outline-none focus:border-primaryColor"
                   label="Email"
                 />
               </div>
               <div className="flex flex-col items-start">
-                <label className="text-white/80">Message</label>
+                <label className="text-primaryText/60">Message</label>
                 <textarea
                   placeholder="Message"
-                  className="w-full px-4 h-[15vh] py-2 bg-transparent border border-white/30 rounded-md text-white/80 focus:outline-none focus:border-primaryColor"
+                  className="w-full px-4 h-[15vh] py-2 bg-transparent border border-white/30 rounded-md text-primaryText focus:outline-none focus:border-primaryColor"
                   label="Message"
                 ></textarea>
               </div>
-              <button className="px-6 py-2  bg-primaryColor text-white/90 rounded-md hover:bg-primaryColor/90 transition-colors duration-300">
+              <button className="px-6 py-2  bg-primaryColor text-primaryText/90 rounded-md hover:bg-primaryColor/90 transition-colors duration-300">
                 Send Message
               </button>
             </div>

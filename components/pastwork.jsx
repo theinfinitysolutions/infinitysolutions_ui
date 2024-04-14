@@ -1,21 +1,23 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import RevealOnScroll from "./RevealOnScroll";
 import ImgBox from "./ImgBox";
+import useIntersect from "./IsIntersect";
 
 let section2 = "Our Projects";
 
 const PastWork = () => {
   const [fixed, setFixed] = React.useState(false);
+  const elementRef = useRef(null);
+  const [state, setState] = React.useState("nothing is visible");
+  const onScreen = useIntersect(elementRef, 0.1);
+
+  useEffect(() => {
+    return onScreen ? setFixed(true) : setFixed(false);
+  }, [onScreen]);
 
   return (
-    <RevealOnScroll
-      threshold={0.35}
-      onReveal={() => {
-        setFixed(true);
-      }}
-      addedClasses={" w-full overflow-y-hidden relative relative"}
-    >
+    <div ref={elementRef} className={" w-full overflow-y-hidden relative"}>
       <section
         onMouseEnter={() => {
           setFixed(true);
@@ -152,7 +154,7 @@ const PastWork = () => {
           />
         </div>
       </section>
-    </RevealOnScroll>
+    </div>
   );
 };
 
