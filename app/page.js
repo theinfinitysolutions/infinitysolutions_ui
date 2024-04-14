@@ -89,7 +89,7 @@ export default function Home() {
             <div className="flex flex-row items-start mt-8 md:mt-0 md:items-center justify-between mr-[30vw] md:mr-64 text3d md:-ml-[3vw]">
               <p
                 style={{ fontSize: `${fontSize}px` }}
-                className={`text-white font-bold`}
+                className={`text-[#c7c7c7] font-bold`}
               >
                 {constantText}
               </p>
@@ -136,7 +136,7 @@ export default function Home() {
                 </span>
               ))}
             </h1> */}
-            <h1 className="overflow-hidden text-[1.25rem] md:text-[1rem] text-start md:text-center text3d text-white">
+            <h1 className="overflow-hidden text-[1.25rem] md:text-[1rem] text-start md:text-center text3d text-primaryText">
               {text2}
             </h1>
           </div>
@@ -296,7 +296,7 @@ export default function Home() {
                     }}
                     className="flex  text-[#fff] group-hover:text-[#c7c7c755]   justify-start w-full  border-b-[1px] border-[#ffffff22] hover:border-[#ffffff44] transition-all duration-300 ease-in-out"
                   >
-                    <div className="hover:text-white flex group/text flex-row items-start space-x-4 py-1">
+                    <div className="hover:text-primaryText flex group/text flex-row items-start space-x-4 py-1">
                       <p className="text-[0.75rem] ">0{index + 1}</p>
                       <h1 className=" text-xl leading-[1.25rem] group-hover/text:translate-x-[20px] duration-200">
                         {item.title}
@@ -313,10 +313,11 @@ export default function Home() {
         threshold={0.35}
         addedClasses={" w-10/12 mt-[10vh] animate-slideUp"}
       >
+        <div className="circle2 absolute left-1/2 top-1/2" />
         <section className="flex flex-col w-full relative z-0 overflow-hidden">
           <div className="flex flex-col md:flex-row w-full h-full justify-between items-center">
             <div className="flex flex-col w-full md:w-[40%] md:h-[80vh]  items-start justify-center">
-              <p className="text-white/90 text-xl md:text-2xl animate-slideUp">
+              <p className="text-primaryText text-xl md:text-2xl animate-slideUp">
                 Why?
               </p>
               <h1 className=" text-[1.5rem] md:text-[2rem] text-start font-bold leading-[2rem] overflow-hidden text-[#0097b2]">
@@ -336,7 +337,7 @@ export default function Home() {
                 specialize in web and mobile app development, UI/UX design, and
                 server management.
               </p>
-              <button className="bg-primaryColor text-white px-4 py-2 mt-8">
+              <button className="bg-primaryColor text-primaryText px-4 py-2 mt-8">
                 Contact Us
               </button>
             </div>
@@ -348,7 +349,7 @@ export default function Home() {
                   <h2 className="text-lg text-primaryColor">
                     {"Tailored Solutions"}
                   </h2>
-                  <p className="text-sm mt-4 text-white/60">
+                  <p className="text-sm mt-4 text-primaryText/60">
                     {
                       "We prioritize understanding your needs to deliver customized, innovative solutions that drive business growth."
                     }
@@ -358,7 +359,7 @@ export default function Home() {
                   <h2 className="text-lg text-primaryColor">
                     {"Comprehensive Expertise"}
                   </h2>
-                  <p className="text-sm mt-4 text-white/60">
+                  <p className="text-sm mt-4 text-primaryText/60">
                     {
                       "We excel in web, mobile, and custom software development, alongside robust data management solutions."
                     }
@@ -370,7 +371,7 @@ export default function Home() {
                   <h2 className="text-lg text-primaryColor">
                     {"Cutting-Edge Solutions"}
                   </h2>
-                  <p className="text-sm mt-4 text-white/60">
+                  <p className="text-sm mt-4 text-primaryText">
                     {
                       "Our experienced team leverages the latest technologies to deliver solutions that exceed expectations."
                     }
@@ -380,7 +381,7 @@ export default function Home() {
                   <h2 className="text-lg text-primaryColor">
                     {"Reliable Support"}
                   </h2>
-                  <p className="text-sm mt-4 text-white/60">
+                  <p className="text-sm mt-4 text-primaryText">
                     {
                       "Count on us for ongoing support and partnership, ensuring your software solutions evolve with your business."
                     }
