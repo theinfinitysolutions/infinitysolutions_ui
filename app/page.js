@@ -85,7 +85,7 @@ export default function Home() {
           onMouseLeave={() => setHovered(false)}
           className="flex flex-col items-center justify-between w-full  relative z-0 "
         >
-          <div className="flex flex-col w-10/12 md:w-[80vw] items-start md:items-center mt-[7.5%]">
+          <div className="flex flex-col w-10/12 mt-[10vh] md:mt-[7.5vh] md:mb-0 md:w-[80vw] items-start md:items-center ">
             <div className="flex flex-row items-start mt-8 md:mt-0 md:items-center justify-between mr-[30vw] md:mr-64 text3d md:-ml-[3vw]">
               <p
                 style={{ fontSize: `${fontSize}px` }}
@@ -216,7 +216,7 @@ export default function Home() {
               ))}
             </h1>
           </div>
-          <div className="w-full flex flex-row justify-between items-start mt-4">
+          <div className="w-full flex flex-row justify-between items-start md:mt-4">
             <div
               className={`hidden md:flex flex-col w-[55%] items-center justify-center `}
             >
