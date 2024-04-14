@@ -105,12 +105,12 @@ const Footer = () => {
       </div>
       <div className="border-t border-[#0097b2] w-full  pt-4 flex flex-col-reverse items-center  md:flex-row md:justify-between">
         <div className="w-3/12" />
-        <p className="text-center text-sm text-white">
+        <p className="text-center text-sm text-primaryText">
           &copy; {new Date().getFullYear()} The Infinity Solutions. All rights
           reserved.
         </p>
         <div className="flex flex-row text-sm justify-center w-full md:w-3/12 mb-4 md:mb-0 text-black">
-          {/* <p className="text-[12px] text-white">Developed and Maintained By </p>
+          {/* <p className="text-[12px] text-primaryText">Developed and Maintained By </p>
           <a
             href="https://theinfinitysolutions.net"
             className="underline ml-2 font-bold text-[12px]"

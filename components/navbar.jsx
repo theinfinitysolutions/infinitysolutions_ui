@@ -50,7 +50,7 @@ const Navbar = () => {
                 `${navbarItemsClass}` +
                 `${
                   pathname === item.link
-                    ? " block border-[1px] border-[#0097b299] text-white bg-[#0097b255] rounded-full"
+                    ? " block border-[1px] border-[#0097b299] text-primaryText bg-[#0097b255] rounded-full"
                     : " text-[#0097b2]"
                 }`
               }
@@ -74,7 +74,7 @@ const Navbar = () => {
           <div className="relative z-10 flex w-[35vw] md:w-[10vw] cursor-pointer items-center overflow-hidden rounded-full border border-[#0097b255] p-[1.5px] shadow-[0_8px_48px_4px_rgba(0,151,178,0.2)]">
             <div className=" animate-rotate absolute inset-0 h-full w-full rounded-full  bg-[conic-gradient(#0097b2_20deg,transparent_120deg)]"></div>
             <div className="relative z-20 flex flex-row justify-center w-full items-center rounded-full bg-black hover:bg-[#121212] px-2 py-2 md:px-4 md:py-2">
-              <p className="relative z-50 w-full block rounded-lg border border-black bg-black  text-center text-[12px] md:text-sm text-white shadow-2xl transition duration-200">
+              <p className="relative z-50 w-full block rounded-lg border border-black bg-black  text-center text-[12px] md:text-sm text-primaryText shadow-2xl transition duration-200">
                 Contact Us
               </p>
               <svg
@@ -83,7 +83,7 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-6 h-6 text-white"
+                className="w-6 h-6 text-primaryText"
               >
                 <path
                   strokeLinecap="round"
