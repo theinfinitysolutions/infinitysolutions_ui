@@ -220,65 +220,61 @@ export default function Home() {
             <div
               className={`hidden md:flex flex-col w-[55%] items-center justify-center `}
             >
-              {showSideCard ? (
-                <div
-                  onMouseEnter={() => {
-                    setShowSideCard(true);
-                  }}
-                  onMouseLeave={() => {
-                    debounce(() => {
-                      setShowSideCard(false);
-                    }, 5000)();
-                  }}
-                  class={`[border-image:linear-gradient(to_right,#0087B2,#FFFFFF,#043357)_2] bg-primaryColor/10  w-full min-h-[50vh] border-[2px] p-8 ${
-                    selectedHover > 0 || selectedHover < 10
-                      ? "animate-slideUp"
-                      : null
-                  }`}
-                >
-                  <h1 className="text-primaryColor/90 text-2xl animate-slideUpSmall">
-                    {serviceList[selectedHover - 1]?.title}
-                  </h1>
-                  <p className="text-md text-[#c7c7c7aa] mt-4 animate-slideUpSmall">
-                    {serviceList[selectedHover - 1]?.description}
-                  </p>
-                  <p className="text-primaryColor mt-4">Applications</p>
-                  <div className="grid grid-cols-4 gap-x-2 gap-y-2 mt-2">
-                    {serviceList[selectedHover - 1]?.applications.map(
-                      (item, index) => {
-                        return (
-                          <div
-                            key={index}
-                            className="bg-[#383e48] py-2 flex justify-center items-center rounded-3xl"
-                          >
-                            <p className="text-[10px] text-[#c7c7c7]">{item}</p>
-                          </div>
-                        );
-                      }
-                    )}
-                  </div>
-                  <p className="text-primaryColor mt-4">Tech Stack</p>
-                  <div className="flex flex-row overflow-scroll mt-2">
-                    {serviceList[selectedHover - 1].techStack.map(
-                      (item, index) => {
-                        return (
-                          <div
-                            key={index}
-                            className="flex flex-col px-4 py-4 items-center border-[1px] rounded-xl mr-2 border-[#383e48]"
-                          >
-                            <div className="h-[7.5vh] w-[7.5vh] relative">
-                              <Image src={item.image} layout="fill" />
-                            </div>
-                            <p className="text-[#383e48] mt-2 text-md">
-                              {item.title}
-                            </p>
-                          </div>
-                        );
-                      }
-                    )}
-                  </div>
+              <div
+                onMouseEnter={() => {
+                  setShowSideCard(true);
+                }}
+                onMouseLeave={() => {
+                  debounce(() => {
+                    setShowSideCard(false);
+                  }, 5000)();
+                }}
+                class={`[border-image:linear-gradient(to_right,#0087B2,#FFFFFF,#043357)_2] bg-primaryColor/10  w-full min-h-[50vh] border-[2px] p-8 ${
+                  selectedHover > 0 || selectedHover < 10
+                    ? "animate-slideUp"
+                    : null
+                }`}
+              >
+                <h1 className="text-primaryColor/90 text-2xl animate-slideUpSmall">
+                  {serviceList[selectedHover]?.title}
+                </h1>
+                <p className="text-md text-[#c7c7c7aa] mt-4 animate-slideUpSmall">
+                  {serviceList[selectedHover]?.description}
+                </p>
+                <p className="text-primaryColor mt-4">Applications</p>
+                <div className="grid grid-cols-4 gap-x-2 gap-y-2 mt-2">
+                  {serviceList[selectedHover]?.applications.map(
+                    (item, index) => {
+                      return (
+                        <div
+                          key={index}
+                          className="bg-[#383e48] py-2 flex justify-center items-center rounded-3xl"
+                        >
+                          <p className="text-[10px] text-[#c7c7c7]">{item}</p>
+                        </div>
+                      );
+                    }
+                  )}
                 </div>
-              ) : null}
+                <p className="text-primaryColor mt-4">Tech Stack</p>
+                <div className="flex flex-row overflow-scroll mt-2">
+                  {serviceList[selectedHover].techStack.map((item, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className="flex flex-col px-4 py-4 items-center border-[1px] rounded-xl mr-2 border-[#383e48]"
+                      >
+                        <div className="h-[7.5vh] w-[7.5vh] relative">
+                          <Image src={item.image} layout="fill" />
+                        </div>
+                        <p className="text-[#383e48] mt-2 text-md">
+                          {item.title}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
             <div
               onMouseLeave={() => {}}
@@ -290,7 +286,7 @@ export default function Home() {
                     key={item.index}
                     onMouseEnter={() => {
                       debounce(() => {
-                        setSelectedHover(index + 1);
+                        setSelectedHover(index);
                         setShowSideCard(true);
                       }, 300)();
                     }}
