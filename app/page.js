@@ -203,7 +203,7 @@ export default function Home() {
           onMouseLeave={() => setHovered(false)}
           className="  relative flex flex-col w-10/12 md:w-[80vw] z-0 overflow-hidden"
         >
-          <div className="flex flex-col  items-start">
+          <div className="flex flex-col  items-center">
             <h1 className="overflow-hidden text-[2rem] md:text-[3rem] text3d text-center font-bold leading-[3rem] text-primaryColor">
               {section2.split("").map((char, index) => (
                 <span
