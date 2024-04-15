@@ -87,6 +87,7 @@ const Navbar = () => {
             <a
               onClick={() => {
                 handleScrollToContact();
+                console.log("scrolled");
               }}
               className="relative z-10 flex w-[35vw] md:w-[10vw] cursor-pointer items-center overflow-hidden rounded-full border border-[#0097b255] p-[1.5px] shadow-[0_8px_48px_4px_rgba(0,151,178,0.2)]"
             >
