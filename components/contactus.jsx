@@ -6,7 +6,10 @@ const section4 = "Contact Us";
 const ContactUs = () => {
   return (
     <RevealOnScroll threshold={0.35} addedClasses={" w-10/12 animate-slideUp"}>
-      <section className="flex flex-col items-center w-full relative z-0 ">
+      <section
+        id="contactus"
+        className="flex flex-col items-center w-full relative z-0 "
+      >
         <div className="flex flex-col md:flex-row w-full h-full relative justify-between items-center my-[10vh] rounded-xl overflow-hidden [border-image:linear-gradient(to_right,#0087B2,#FFFFFF,#043357)_1] border-[1px]">
           <div className="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#80808022_1px,transparent_1px),linear-gradient(to_bottom,#80808022_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
