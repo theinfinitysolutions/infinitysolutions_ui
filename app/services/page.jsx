@@ -20,14 +20,14 @@ const section = "Our Services";
 export const SwiperButtons = () => {
   const swiper = useSwiper();
   return (
-    <div className=" absolute z-20 top-[52.5vh] md:top-1/2 left-0  md:w-full  flex flex-row justify-between">
+    <div className=" absolute z-20 w-full top-1/2 opacity-55 md:opacity-100 md:top-1/2 right-0  md:w-full  flex flex-row justify-between">
       <a
         onClick={() => {
           swiper.slidePrev();
         }}
         className="cursor-pointer border-[1px] bg-black border-primaryColor rounded-full p-2"
       >
-        <GrLinkPrevious className="text-2xl text-white" />
+        <GrLinkPrevious className=" text-xl md:text-2xl text-white" />
       </a>
       <a
         onClick={() => {
@@ -35,7 +35,7 @@ export const SwiperButtons = () => {
         }}
         className="cursor-pointer border-[1px] bg-black border-primaryColor rounded-full p-2"
       >
-        <GrLinkNext className="text-2xl text-white" />
+        <GrLinkNext className="text-xl md:text-2xl text-white" />
       </a>
     </div>
   );
@@ -64,7 +64,7 @@ const Services = () => {
           </h1>
         </div>
         <div className="flex flex-row w-full items-center justify-between md:mt-8">
-          <div className="w-full md:w-8/12 h-[60vh]">
+          <div className="w-full md:w-8/12">
             <Swiper
               ref={swiperRef}
               grabCursor={true}
@@ -78,7 +78,7 @@ const Services = () => {
                 return (
                   <SwiperSlide key={index} className="w-full h-full">
                     <div
-                      class={`[border-image:linear-gradient(to_right,#0087B2,#FFFFFF,#043357)_2] h-[50vh] bg-primaryColor/10  w-full md:h-full border-[2px] p-4 md:p-8 ${
+                      class={`[border-image:linear-gradient(to_right,#0087B2,#FFFFFF,#043357)_2] bg-primaryColor/10  w-full md:h-full border-[2px] p-4 md:p-8 ${
                         selectedHover > 0 || selectedHover < 10
                           ? "animate-slideUp"
                           : null

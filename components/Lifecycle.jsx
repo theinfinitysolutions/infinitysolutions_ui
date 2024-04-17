@@ -14,7 +14,7 @@ import { GrLinkPrevious } from "react-icons/gr";
 export const SwiperButtons = () => {
   const swiper = useSwiper();
   return (
-    <div className=" absolute z-20 top-9/12 md:top-1/2 left-0  md:w-full  flex flex-row justify-between">
+    <div className=" absolute z-20 top-[40%] w-full opacity-50 md:opacity-100 md:top-1/2 left-0  md:w-full  flex flex-row justify-between">
       <a
         onClick={() => {
           swiper.slidePrev();
@@ -71,7 +71,7 @@ const Lifecycle = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-row w-11/12 mt-[5vh] h-[35vh] md:h-[40vh] 2xl:h-[35vh]">
+        <div className="flex flex-row w-11/12 mt-[5vh] md:h-[40vh] 2xl:h-[35vh]">
           <Swiper
             onSwiper={(swiper) => console.log("swiper", swiper)}
             slidesPerView={mobile ? 1 : 3}
@@ -83,7 +83,7 @@ const Lifecycle = () => {
             {lifecycleItems.map((item, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <div className="flex flex-col  justify-center items-center w-full h-[25vh] md:h-full border-[1px] border-primaryColor rounded-md">
+                  <div className="flex flex-col  justify-center items-center w-full  md:h-full border-[1px] border-primaryColor rounded-md">
                     {/* <div className=" absolute w-full h-full -z-10">
                       <Image
                         src={"/innovative.png"}
@@ -93,7 +93,7 @@ const Lifecycle = () => {
                         className="object-cover opacity-25"
                       />
                     </div> */}
-                    <div className="flex flex-col w-10/12 justify-center h-full">
+                    <div className="flex flex-col w-10/12 justify-center h-full py-8">
                       <h3 className="text-3xl w-12 h-12 flex justify-center items-center rounded-full border-[1px] border-white text-primaryColor">
                         {index + 1}
                       </h3>
