@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-const useIntersect = (ref, threshold) => {
+const useIntersect = (ref) => {
   const [isOnScreen, setIsOnScreen] = useState(false);
   const observerRef = useRef(null);
 
@@ -10,7 +10,9 @@ const useIntersect = (ref, threshold) => {
         setIsOnScreen(entry.isIntersecting);
       },
       {
-        threshold: threshold || 0.5,
+        threshold: 0.5,
+        rootMargin: "0px",
+        root: null,
       }
     );
   }, []);

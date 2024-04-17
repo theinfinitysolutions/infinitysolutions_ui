@@ -111,24 +111,12 @@ export const serviceList = [
     ],
     techStack: [
       {
-        image: "/django.png",
-        title: "Django",
+        image: "/jupyter.png",
+        title: "Jupyter Notebook",
       },
       {
-        image: "/nextjs.png",
-        title: "Nextjs",
-      },
-      {
-        image: "/nodejs.png",
-        title: "Node.js",
-      },
-      {
-        image: "/react.png",
-        title: "Reactjs",
-      },
-      {
-        image: "/vuejs.png",
-        title: "Vuejs",
+        image: "/pandas.png",
+        title: "Pandas",
       },
     ],
   },
@@ -179,12 +167,28 @@ export const serviceList = [
     ],
     techStack: [
       {
-        image: "/jupyter.png",
-        title: "Jupyter Notebook",
+        image: "/django.png",
+        title: "Django",
       },
       {
-        image: "/pandas.png",
-        title: "Pandas",
+        image: "/nextjs.png",
+        title: "Nextjs",
+      },
+      {
+        image: "/nodejs.png",
+        title: "Node.js",
+      },
+      {
+        image: "/postgresql.png",
+        title: "PostgreSQL",
+      },
+      {
+        image: "/react.png",
+        title: "Reactjs",
+      },
+      {
+        image: "/vuejs.png",
+        title: "Vuejs",
       },
     ],
   },
@@ -310,5 +314,89 @@ export const projects = [
         title: "PostgreSQL",
       },
     ],
+  },
+];
+
+export const DeliveryItems = [
+  {
+    title: "Agile Development",
+    description:
+      "We follow agile methodologies to ensure flexibility, transparency, and timely delivery of projects.",
+    icon: "/agile.png",
+  },
+  {
+    title: "Data Security",
+    description:
+      "We prioritize data security and confidentiality to protect sensitive information and maintain trust.",
+    icon: "/datasecurity.png",
+  },
+  {
+    title: "Scalable Solutions",
+    description:
+      "We build scalable and future-proof solutions that can adapt to changing business needs and growth.",
+    icon: "/scalablesolutions.png",
+  },
+  {
+    title: "Dedicated Support",
+    description:
+      "Our team provides dedicated support and maintenance services to ensure smooth functioning of your software.",
+    icon: "/dedicatedsupport.png",
+  },
+  {
+    title: "Client Centric Development",
+    description:
+      "We believe in close collaboration with clients to understand their requirements and deliver customized solutions.",
+    icon: "/clientcentric.png",
+  },
+  {
+    title: "Quality Assurance",
+    description:
+      "Our QA team performs rigorous testing to ensure high-quality and bug-free software solutions.",
+    icon: "/qualityassurance.png",
+  },
+  {
+    title: "Innovative Technologies",
+    description:
+      "We leverage innovative technologies and tools to deliver cutting-edge solutions that drive business growth.",
+    icon: "/innovative.png",
+  },
+];
+
+export const lifecycleItems = [
+  {
+    title: "Ideation",
+    description:
+      "We brainstorm ideas and concepts to define the scope and objectives of the project.",
+    icon: "/ideation.png",
+  },
+  {
+    title: "Design",
+    description:
+      "We create wireframes, mockups, and prototypes to visualize the user interface and user experience.",
+    icon: "/design.png",
+  },
+  {
+    title: "Development",
+    description:
+      "We develop the software using the latest technologies and best practices to ensure high performance and scalability.",
+    icon: "/development.png",
+  },
+  {
+    title: "Testing",
+    description:
+      "We conduct comprehensive testing to identify and fix bugs, errors, and performance issues.",
+    icon: "/testing.png",
+  },
+  {
+    title: "Deployment",
+    description:
+      "We deploy the software on the server and ensure smooth integration with existing systems and databases.",
+    icon: "/deployment.png",
+  },
+  {
+    title: "Maintenance",
+    description:
+      "We provide ongoing support, maintenance, and updates to keep the software running smoothly and efficiently.",
+    icon: "/maintenance.png",
   },
 ];
