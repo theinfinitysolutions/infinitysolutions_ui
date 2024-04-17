@@ -7,6 +7,9 @@ import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
+import { IoLocation } from "react-icons/io5";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdOutlineMailOutline } from "react-icons/md";
 
 let footerItemsClass =
   "text-md lg:text-md hover:underline text-primaryColor/80 cursor-pointer";
@@ -84,56 +87,63 @@ const Footer = () => {
               </ul>
             </div>
             <div className="w-full md:w-5/12 flex flex-col items-left">
-              <div className="flex flex-col">
-                <div className="flex flex-col">
-                  <h3 className="text-xl font-bold text-primaryColor">
-                    Address
-                  </h3>
-                  <p className="text-md text-primaryColor">
-                    Plot No. 23, Kailashpuri, New Sanganer Road, Jaipur,
-                    Rajasthan, 302019
-                  </p>
-                </div>
-                <div className="flex flex-col mt-4">
-                  <h3 className="text-xl font-bold text-primaryColor">Email</h3>
-                  <p className="text-md text-primaryColor">
-                    {"raman@theinfinitysolutions.net "}
-                  </p>
-                  <p className="text-md text-primaryColor">
-                    {"eklavaya@theinfinitysolutions.net"}
-                  </p>
-                </div>
-                <div className="flex flex-col mt-4">
-                  <h3 className="text-xl font-bold text-primaryColor">Phone</h3>
-                  <p className="text-md text-primaryColor">
-                    {"+91-8233842323 "}
-                  </p>
-                  <p className="text-md text-primaryColor">
-                    {"+91-9784450222 "}
-                  </p>
-                </div>
-                {/* <div className="flex flex-row justify-start items-center mb-1">
-                  <FaLinkedin color="#0097b2" className="text-xl" />
-                  <p className="text-primaryColor text-md mx-2">Linkedin</p>
-                </div>
-                <div className="flex flex-row justify-start items-center mb-1">
-                  <FaXTwitter color="#0097b2" className="text-xl" />
-                  <p className="text-primaryColor text-md mx-2">
-                    {" X (Twitter)"}
-                  </p>
-                </div>
-                <div className="flex flex-row justify-start items-center mb-1">
-                  <FaGithub color="#0097b2" className="text-xl" />
-                  <p className="text-primaryColor text-md mx-2">{" Github"}</p>
-                </div> */}
+              <h3 className="text-xl font-bold text-primaryColor">Follow us</h3>
+              <div className="justify-start gap-x-2 flex flex-row mt-2">
+                <FaLinkedin color="#0097b2" className="text-xl" />
+                <FaXTwitter color="#0097b2" className="text-xl" />
+                <FaGithub color="#0097b2" className="text-xl" />
               </div>
             </div>
           </div>
-          <div className="flex flex-row justify-start md:justify-end mt-8  w-full">
-            <div className=" w-[30vw]  md:w-2/12 justify-between flex flex-row">
-              <FaLinkedin color="#0097b2" className="text-xl" />
-              <FaXTwitter color="#0097b2" className="text-xl" />
-              <FaGithub color="#0097b2" className="text-xl" />
+          <div className="flex flex-row">
+            <div className="w-full flex flex-col md:flex-row justify-between bg-primaryColor/25 mt-8 rounded-md px-4 py-4">
+              <div className="flex flex-col items-start w-full md:w-[40%]">
+                <div className="h-10 w-10 rounded-md flex justify-center items-center border-[1px] border-primaryColor">
+                  <IoLocation color="#0097b2" className="text-2xl" />
+                </div>
+                <p className="text-mg text-primaryColor mt-1">Address</p>
+                <p className="text-sm text-primaryColor mt-1">
+                  Plot No. 23, Kailashpuri, New Sanganer Road, Jaipur,
+                  Rajasthan, 302019
+                </p>
+              </div>
+              <div className="flex flex-col justify-between w-full mt-4 md:mt-0 md:w-[50%]">
+                <div className="flex flex-row items-center">
+                  <div className="h-10 w-10 rounded-md flex justify-center items-center border-[1px] border-primaryColor">
+                    <FaPhoneAlt color="#0097b2" className="text-2xl" />
+                  </div>
+                  <div className="ml-4">
+                    <p className="text-lg md:text-md text-primaryColor">
+                      Phone
+                    </p>
+                    <p className="text-md md:text-xs text-primaryColor">
+                      {"+91-8233842323 "}
+                    </p>
+                    <p className="text-md md:text-xs text-primaryColor">
+                      {"+91-9784450222 "}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex flex-row items-center mt-2 md:mt-0">
+                  <div className="h-10 w-10 rounded-md flex justify-center items-center border-[1px] border-primaryColor">
+                    <MdOutlineMailOutline
+                      color="#0097b2"
+                      className="text-2xl"
+                    />
+                  </div>
+                  <div className="ml-4">
+                    <p className="text-lg md:text-md md:text-mg text-primaryColor mt-1">
+                      Email
+                    </p>
+                    <p className="text-md md:text-xs text-primaryColor">
+                      {"raman@theinfinitysolutions.net "}
+                    </p>
+                    <p className="text-md md:text-xs text-primaryColor">
+                      {"eklavaya@theinfinitysolutions.net"}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

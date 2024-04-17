@@ -1,11 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import RevealOnScroll from "@/components/RevealOnScroll";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { EffectCreative, Pagination } from "swiper/modules";
 import { serviceList } from "@/utils/consts";
 import Image from "next/image";
+import { GrLinkNext } from "react-icons/gr";
+import { GrLinkPrevious } from "react-icons/gr";
 
 // Import Swiper styles
 import "swiper/css";
@@ -15,14 +17,39 @@ import "swiper/css/effect-creative";
 
 const section = "Our Services";
 
+export const SwiperButtons = () => {
+  const swiper = useSwiper();
+  return (
+    <div className=" absolute z-20 top-[52.5vh] md:top-1/2 left-0  md:w-full  flex flex-row justify-between">
+      <a
+        onClick={() => {
+          swiper.slidePrev();
+        }}
+        className="cursor-pointer border-[1px] bg-black border-primaryColor rounded-full p-2"
+      >
+        <GrLinkPrevious className="text-2xl text-white" />
+      </a>
+      <a
+        onClick={() => {
+          swiper.slideNext();
+        }}
+        className="cursor-pointer border-[1px] bg-black border-primaryColor rounded-full p-2"
+      >
+        <GrLinkNext className="text-2xl text-white" />
+      </a>
+    </div>
+  );
+};
+
 const Services = () => {
+  const swiperRef = useRef(null);
   const [selectedHover, setSelectedHover] = React.useState(0);
 
   return (
     <div className="flex z-0 min-h-screen flex-col items-center justify-between">
-      <div className="absolute z-100 flex flex-col w-full top-0 h-72 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#0097b244] via-[#0097b211] to-[#0097b200] "></div>
+      <div className="absolute z-10 flex flex-col w-full top-0 h-72 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#0097b244] via-[#0097b211] to-[#0097b200] "></div>
       <div className="absolute z-0 inset-0 h-full to-0 w-full bg-transparent bg-[linear-gradient(to_right,#80808022_1px,transparent_1px),linear-gradient(to_bottom,#80808022_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_40%,#000_60%,transparent_100%)]"></div>
-      <div className="flex flex-col w-10/12 mt-[10vh] md:mt-[2.5vh]">
+      <div className="flex flex-col w-10/12 mt-[10vh] md:mt-[2.5vh] z-0">
         <div className="flex flex-col  items-start">
           <h1 className="overflow-hidden text-[2rem] md:text-[3rem] text3d text-center font-bold leading-[3rem] text-primaryColor">
             {section.split("").map((char, index) => (
@@ -39,30 +66,19 @@ const Services = () => {
         <div className="flex flex-row w-full items-center justify-between md:mt-8">
           <div className="w-full md:w-8/12 h-[60vh]">
             <Swiper
+              ref={swiperRef}
               grabCursor={true}
               effect={"creative"}
               loop={true}
-              pagination={{
-                clickable: true,
-              }}
-              creativeEffect={{
-                prev: {
-                  shadow: true,
-                  translate: ["-120%", 0, -500],
-                },
-                next: {
-                  shadow: true,
-                  translate: ["120%", 0, -500],
-                },
-              }}
-              modules={[EffectCreative, Pagination]}
+              modules={[Pagination]}
               className="mySwiper2 w-full h-full bg-transparent"
             >
+              <SwiperButtons />
               {serviceList.map((item, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full h-full">
                     <div
-                      class={`[border-image:linear-gradient(to_right,#0087B2,#FFFFFF,#043357)_2] bg-primaryColor/10  w-full h-full border-[2px] p-4 md:p-8 ${
+                      class={`[border-image:linear-gradient(to_right,#0087B2,#FFFFFF,#043357)_2] h-[50vh] bg-primaryColor/10  w-full md:h-full border-[2px] p-4 md:p-8 ${
                         selectedHover > 0 || selectedHover < 10
                           ? "animate-slideUp"
                           : null
@@ -120,12 +136,10 @@ const Services = () => {
               return (
                 <a
                   key={item.index}
-                  onMouseEnter={() => {
-                    debounce(() => {
-                      setSelectedHover(index + 1);
-                    }, 300)();
+                  onClick={() => {
+                    swiperRef.current.swiper.slideTo(index);
                   }}
-                  className="flex  text-[#fff] group-hover:text-[#c7c7c755]   justify-start w-full  border-b-[1px] border-[#ffffff22] hover:border-[#ffffff44] transition-all duration-300 ease-in-out"
+                  className="flex  text-[#fff] group-hover:text-[#c7c7c755]  cursor-pointer justify-start w-full  border-b-[1px] border-[#ffffff22] hover:border-[#ffffff44] transition-all duration-300 ease-in-out"
                 >
                   <div className="hover:text-primaryText flex group/text flex-row items-start space-x-4 py-1">
                     <p className="text-[0.75rem] ">0{index + 1}</p>
@@ -145,7 +159,10 @@ const Services = () => {
             }
           </p>
           <div className=" flex w-full md:max-w-lg items-center justify-center mt-4">
-            <div className="relative z-10 flex w-[35vw] md:w-[10vw] cursor-pointer items-center overflow-hidden rounded-full border border-[#0097b255] p-[1.5px] shadow-[0_8px_48px_4px_rgba(0,151,178,0.2)]">
+            <a
+              onClick={() => {}}
+              className="relative z-10 flex w-[35vw] md:w-[10vw] cursor-pointer items-center overflow-hidden rounded-full border border-[#0097b255] p-[1.5px] shadow-[0_8px_48px_4px_rgba(0,151,178,0.2)]"
+            >
               <div className=" animate-rotate absolute inset-0 h-full w-full rounded-full  bg-[conic-gradient(#0097b2_20deg,transparent_120deg)]"></div>
               <div className="relative z-20 flex flex-row justify-center w-full items-center rounded-full bg-black hover:bg-[#121212] px-2 py-2 md:px-4 md:py-2">
                 <p className="relative z-50 w-full block rounded-lg border border-black bg-black  text-center text-[12px] md:text-sm text-primaryText shadow-2xl transition duration-200">
@@ -166,7 +183,7 @@ const Services = () => {
                   />
                 </svg>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>

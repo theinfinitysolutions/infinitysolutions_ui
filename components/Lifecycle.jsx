@@ -11,7 +11,7 @@ import Image from "next/image";
 import { GrLinkNext } from "react-icons/gr";
 import { GrLinkPrevious } from "react-icons/gr";
 
-const SwiperButtons = () => {
+export const SwiperButtons = () => {
   const swiper = useSwiper();
   return (
     <div className=" absolute z-20 top-9/12 md:top-1/2 left-0  md:w-full  flex flex-row justify-between">
