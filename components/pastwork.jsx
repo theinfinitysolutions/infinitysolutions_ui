@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import RevealOnScroll from "./RevealOnScroll";
 import ImgBox from "./ImgBox";
 import useIntersect from "./IsIntersect";
@@ -10,7 +10,7 @@ const PastWork = () => {
   const [fixed, setFixed] = React.useState(false);
   const elementRef = useRef(null);
   const [state, setState] = React.useState("nothing is visible");
-  const onScreen = useIntersect(elementRef, 0.1);
+  const onScreen = useIntersect(elementRef);
 
   useEffect(() => {
     return onScreen ? setFixed(true) : setFixed(false);
@@ -19,12 +19,12 @@ const PastWork = () => {
   return (
     <div ref={elementRef} className={" w-full overflow-y-hidden relative"}>
       <section
-        onMouseEnter={() => {
-          setFixed(true);
-        }}
-        onMouseLeave={() => {
-          setFixed(false);
-        }}
+        // onMouseEnter={() => {
+        //   setFixed(true);
+        // }}
+        // onMouseLeave={() => {
+        //   setFixed(false);
+        // }}
         className="hidden md:flex flex-col h-[150vh] w-full relative z-0 overflow-hidden px-[10vw]"
       >
         <div
@@ -43,7 +43,7 @@ const PastWork = () => {
           </div>
         </div>
 
-        <div className="flex flex-col  items-start mt-[5%] ">
+        <div className="flex flex-col  select-none	 items-start mt-[5%] ">
           <h1 className="overflow-hidden text-[48px] text-start font-bold leading-[6rem] text-[#0097b2]">
             {section2.split("").map((char, index) => (
               <span

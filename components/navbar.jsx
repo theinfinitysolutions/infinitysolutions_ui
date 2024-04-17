@@ -19,7 +19,7 @@ const Navbar = () => {
 
   React.useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 50) {
         setScrollLength(window.scrollY);
       }
     };
@@ -42,7 +42,7 @@ const Navbar = () => {
     <div
       className={`${
         scrollLength > 50 ? "backdrop-blur-xl" : " 	bg-transparent"
-      }  flex flex-col max-w-screen w-full fixed top-0 px-[5%] 2xl:px-[10%] justify-center items-center py-8 z-10`}
+      }  flex flex-col max-w-screen w-full fixed top-0 px-[5%] 2xl:px-[10%] justify-center items-center py-6 z-10`}
     >
       <div className="flex flex-row w-full justify-between items-center">
         <div className="hidden md:flex flex-row justify-between w-[25%] 2xl:w-[20%] h-[50px] bg-[#00000077] items-center border-[1px] px-6  rounded-full shadow- shadow-[0_4px_24px_1px_rgba(0,151,178,0.2)] border-[#0097b255]">
@@ -115,8 +115,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="md:hidden flex flex-row w-full mt-4">
-        <div className="flex flex-row justify-between w-full bg-[#00000077] items-center border-[1px] px-[10vw] md:px-6  rounded-full py-1 shadow-[0_4px_24px_1px_rgba(0,151,178,0.2)] border-[#0097b255]">
+      <div className="md:hidden flex flex-row max-w-screen px-2 mt-4">
+        <div className="flex flex-row justify-between w-full bg-[#00000077] items-center border-[1px] px-[5vw] md:px-6  rounded-full py-1 shadow-[0_4px_24px_1px_rgba(0,151,178,0.2)] border-[#0097b255]">
           {/* <div className="w-8/12 flex flex-row justify-between items-center"> */}
           {navbarItems.map((item, index) => {
             return (
