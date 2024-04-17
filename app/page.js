@@ -2,7 +2,12 @@
 import Image from "next/image";
 import Navbar from "@/components/navbar";
 import React, { useLayoutEffect, useRef } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { IconContainer } from "@/components/iconcontainer";
 import { Radar } from "@/components/radar";
@@ -22,6 +27,8 @@ import { GiMining } from "react-icons/gi";
 import { SiAzurepipelines } from "react-icons/si";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { MdOutlineManageAccounts } from "react-icons/md";
+import Delivery from "@/components/Delivery";
+import Lifecycle from "@/components/Lifecycle";
 
 const rotatingText = ["Possibilities", "Ideas", "Innovations", "Solutions"];
 const constantText = "Infinite";
@@ -46,6 +53,7 @@ function debounce(func, timeout = 300) {
 }
 
 export default function Home() {
+  const radarRef = useRef(null);
   const [hovered, setHovered] = React.useState(false);
   const [selectedHover, setSelectedHover] = React.useState(0);
   const [showSideCard, setShowSideCard] = React.useState(false);
@@ -61,7 +69,7 @@ export default function Home() {
     } else {
       setMobile(false);
     }
-  });
+  }, []);
 
   useLayoutEffect(() => {
     let height = window.innerHeight;
@@ -72,10 +80,16 @@ export default function Home() {
     } else {
       setFontSize(64);
     }
-  });
+  }, []);
+
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "-500%"]);
 
   return (
-    <main className="flex min-h-screen max-w-screen flex-col items-center justify-between">
+    <main
+      ref={mobile ? radarRef : null}
+      className="flex min-h-screen max-w-screen flex-col items-center justify-between"
+    >
       <div className="absolute z-100 flex flex-col w-full top-0 h-72 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#0097b244] via-[#0097b211] to-[#0097b200] "></div>
       <div className="absolute z-0 inset-0 h-full to-0 w-full bg-transparent bg-[linear-gradient(to_right,#80808022_1px,transparent_1px),linear-gradient(to_bottom,#80808022_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_40%,#000_60%,transparent_100%)]"></div>
 
@@ -86,7 +100,7 @@ export default function Home() {
           className="flex flex-col items-center justify-between w-full  relative z-0 "
         >
           <div className="flex flex-col w-10/12 mt-[10vh] md:mt-[7.5vh] md:mb-0 md:w-[80vw] items-start md:items-center ">
-            <div className="flex flex-row items-start mt-8 md:mt-0 md:items-center justify-between mr-[30vw] md:mr-64 text3d md:-ml-[3vw]">
+            <div className="flex flex-row text3d items-start mt-8 md:mt-0 md:items-center justify-between mr-[30vw] md:mr-64  md:-ml-[3vw]">
               <p
                 style={{ fontSize: `${fontSize}px` }}
                 className={`text-[#c7c7c7] font-bold`}
@@ -140,58 +154,64 @@ export default function Home() {
               {text2}
             </h1>
           </div>
-          <div className="relative flex h-[50vh] md:h-[65vh] 2xl:-[60vh] w-10/12 flex-col items-center justify-center space-y-4  px-4">
-            <div className="mx-auto w-full max-w-xl mt-[10vh] md:mt-[5vh]">
-              <div className="flex w-full  items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
-                <IconContainer
-                  text="Web Development"
-                  icon={<CgWebsite className={iconClass} />}
-                  delay={0.2}
-                />
-                <IconContainer
-                  delay={0.4}
-                  text="Mobile apps"
-                  icon={<FaMobile className={iconClass} />}
-                />
-                <IconContainer
-                  text="Custom Softwares"
-                  delay={0.3}
-                  icon={<SiBmcsoftware className={iconClass} />}
-                />
+          <motion.div
+            style={{ y: y }}
+            transition={{ duration: 3 }}
+            className="w-10/12  relative"
+          >
+            <div className="relative flex h-[50vh] md:h-[65vh] 2xl:-[60vh] w-full flex-col items-center justify-center space-y-4  px-4">
+              <div className="mx-auto w-full max-w-xl mt-[10vh] md:mt-[5vh]">
+                <div className="flex w-full  items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
+                  <IconContainer
+                    text={`Web Development`}
+                    icon={<CgWebsite className={iconClass} />}
+                    delay={0.2}
+                  />
+                  <IconContainer
+                    delay={0.4}
+                    text="Mobile apps"
+                    icon={<FaMobile className={iconClass} />}
+                  />
+                  <IconContainer
+                    text="Custom Softwares"
+                    delay={0.3}
+                    icon={<SiBmcsoftware className={iconClass} />}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="mx-auto w-full max-w-sm">
-              <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
-                <IconContainer
-                  text="Data Mining"
-                  delay={0.5}
-                  icon={<GiMining className={iconClass} />}
-                />
-                <IconContainer
-                  text="ETL Pipelines"
-                  icon={<SiAzurepipelines className={iconClass} />}
-                  delay={0.8}
-                />
+              <div className="mx-auto w-full max-w-sm">
+                <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
+                  <IconContainer
+                    text="Data Mining"
+                    delay={0.5}
+                    icon={<GiMining className={iconClass} />}
+                  />
+                  <IconContainer
+                    text="ETL Pipelines"
+                    icon={<SiAzurepipelines className={iconClass} />}
+                    delay={0.8}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="mx-auto w-full max-w-xl">
-              <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
-                <IconContainer
-                  delay={0.6}
-                  text="Data Analytics"
-                  icon={<LuLayoutDashboard className={iconClass} />}
-                />
-                <IconContainer
-                  delay={0.7}
-                  text="ERP Development"
-                  icon={<MdOutlineManageAccounts className={iconClass} />}
-                />
+              <div className="mx-auto w-full max-w-xl">
+                <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
+                  <IconContainer
+                    delay={0.6}
+                    text="Data Analytics"
+                    icon={<LuLayoutDashboard className={iconClass} />}
+                  />
+                  <IconContainer
+                    delay={0.7}
+                    text="ERP Development"
+                    icon={<MdOutlineManageAccounts className={iconClass} />}
+                  />
+                </div>
               </div>
-            </div>
 
-            <Radar className="absolute md:-bottom-12 2xl:-bottom-8" />
-            {/* <div className="absolute bottom-0 z-[41] h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent" /> */}
-          </div>
+              <Radar className="absolute md:-bottom-12 2xl:-bottom-8" />
+              {/* <div className="absolute bottom-0 z-[41] h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent" /> */}
+            </div>
+          </motion.div>
         </section>
       </RevealOnScroll>
       <RevealOnScroll
@@ -367,7 +387,7 @@ export default function Home() {
                   <h2 className="text-lg text-primaryColor">
                     {"Cutting-Edge Solutions"}
                   </h2>
-                  <p className="text-sm mt-4 text-primaryText">
+                  <p className="text-sm mt-4 text-primaryText/60">
                     {
                       "Our experienced team leverages the latest technologies to deliver solutions that exceed expectations."
                     }
@@ -377,7 +397,7 @@ export default function Home() {
                   <h2 className="text-lg text-primaryColor">
                     {"Reliable Support"}
                   </h2>
-                  <p className="text-sm mt-4 text-primaryText">
+                  <p className="text-sm mt-4 text-primaryText/60">
                     {
                       "Count on us for ongoing support and partnership, ensuring your software solutions evolve with your business."
                     }
@@ -388,6 +408,8 @@ export default function Home() {
           </div>
         </section>
       </RevealOnScroll>
+      <Delivery />
+      <Lifecycle />
       <PastWork />
       <ContactUs />
     </main>

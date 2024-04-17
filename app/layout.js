@@ -17,7 +17,9 @@ const inter = Lora({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-black max-w-screen`}>
+      <body
+        className={`${inter.className} bg-black max-w-screen overflow-x-hidden`}
+      >
         <Cursor />
         <Navbar />
         <div className="bg-black min-h-screen flex flex-col">
