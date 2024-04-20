@@ -46,7 +46,7 @@ const Footer = () => {
             Solutions
           </span>
         </div>
-        <div className="flex flex-col w-full lg:w-[50%] mt-8 lg:mt-[2.5vh] mx-2">
+        <div className="flex flex-col w-full lg:w-[50%] mt-8 lg:mt-[2.5vh] md:mx-2">
           <div className="w-full  grid gap-y-8 grid-cols-2 md:flex md:flex-row justify-between ">
             <div className=" md:w-6/12 flex flex-col items-left">
               <h3 className="text-xl font-bold text-primaryColor">
@@ -96,53 +96,57 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-row">
-            <div className="w-full flex flex-col md:flex-row justify-between bg-primaryColor/25 mt-8 rounded-md px-4 py-4">
-              <div className="flex flex-col items-start w-full md:w-[40%]">
-                <div className="h-10 w-10 rounded-md flex justify-center items-center border-[1px] border-primaryColor">
-                  <IoLocation color="#0097b2" className="text-2xl" />
+            <div className="w-full flex flex-col md:flex-col justify-between bg-primaryColor/25 mt-8 rounded-md px-4 py-4">
+              <div className="flex flex-col md:flex-row w-full">
+                <a
+                  onClick={() => {
+                    window.open("tel:+918233842323", "_blank");
+                  }}
+                  className="flex flex-row items-center cursor-pointer"
+                >
+                  <div className="h-6 w-6 md:h-8 md:w-8 rounded-md flex justify-center items-center border-[1px] border-primaryColor">
+                    <FaPhoneAlt
+                      color="#0097b2"
+                      className="text-sm md:text-xl"
+                    />
+                  </div>
+                  <div className="ml-2">
+                    <p className="text-sm md:text-md text-primaryColor">
+                      {"+91-8233842323 "}
+                    </p>
+                  </div>
+                </a>
+                <a
+                  onClick={() => {
+                    window.open(
+                      "mailto:info@theinfinitysolutions.net",
+                      "_blank"
+                    );
+                  }}
+                  className="flex flex-row items-center mt-4 md:mt-0 md:ml-8 cursor-pointer"
+                >
+                  <div className="h-6 w-6 md:h-8 md:w-8 rounded-md flex justify-center items-center border-[1px] border-primaryColor">
+                    <MdOutlineMailOutline
+                      color="#0097b2"
+                      className="text-sm md:text-xl"
+                    />
+                  </div>
+                  <div className="ml-2">
+                    <p className="text-sm md:text-md text-primaryColor">
+                      {"info@theinfinitysolutions.net"}
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div className="flex flex-row items-center justify-start w-full mt-4 ">
+                <div className="h-6 w-6 md:h-8 md:w-8 rounded-md flex justify-center items-center border-[1px] border-primaryColor">
+                  <IoLocation color="#0097b2" className=" text-sm md:text-xl" />
                 </div>
-                <p className="text-mg text-primaryColor mt-1">Address</p>
-                <p className="text-sm text-primaryColor mt-1">
+
+                <p className=" w-11/12 text-sm md:text-md text-primaryColor ml-2">
                   Plot No. 23, Kailashpuri, New Sanganer Road, Jaipur,
                   Rajasthan, 302019
                 </p>
-              </div>
-              <div className="flex flex-col justify-between w-full mt-4 md:mt-0 md:w-[50%]">
-                <div className="flex flex-row items-center">
-                  <div className="h-10 w-10 rounded-md flex justify-center items-center border-[1px] border-primaryColor">
-                    <FaPhoneAlt color="#0097b2" className="text-2xl" />
-                  </div>
-                  <div className="ml-4">
-                    <p className="text-lg md:text-md text-primaryColor">
-                      Phone
-                    </p>
-                    <p className="text-md md:text-xs text-primaryColor">
-                      {"+91-8233842323 "}
-                    </p>
-                    <p className="text-md md:text-xs text-primaryColor">
-                      {"+91-9784450222 "}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-row items-center mt-2 md:mt-0">
-                  <div className="h-10 w-10 rounded-md flex justify-center items-center border-[1px] border-primaryColor">
-                    <MdOutlineMailOutline
-                      color="#0097b2"
-                      className="text-2xl"
-                    />
-                  </div>
-                  <div className="ml-4">
-                    <p className="text-lg md:text-md md:text-mg text-primaryColor mt-1">
-                      Email
-                    </p>
-                    <p className="text-md md:text-xs text-primaryColor">
-                      {"raman@theinfinitysolutions.net "}
-                    </p>
-                    <p className="text-md md:text-xs text-primaryColor">
-                      {"eklavaya@theinfinitysolutions.net"}
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
