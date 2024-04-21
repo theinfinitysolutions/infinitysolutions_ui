@@ -17,33 +17,57 @@ import "swiper/css/effect-creative";
 
 const section = "Our Services";
 
-export const SwiperButtons = () => {
-  const swiper = useSwiper();
-  return (
-    <div className=" absolute z-20 w-full top-1/2 opacity-55 md:opacity-100 md:top-1/2 right-0  md:w-full  flex flex-row justify-between">
-      <a
-        onClick={() => {
-          swiper.slidePrev();
-        }}
-        className="cursor-pointer border-[1px] bg-black border-primaryColor rounded-full p-2"
-      >
-        <GrLinkPrevious className=" text-xl md:text-2xl text-white" />
-      </a>
-      <a
-        onClick={() => {
-          swiper.slideNext();
-        }}
-        className="cursor-pointer border-[1px] bg-black border-primaryColor rounded-full p-2"
-      >
-        <GrLinkNext className="text-xl md:text-2xl text-white" />
-      </a>
-    </div>
-  );
-};
+// export const SwiperButtons = () => {
+//   const swiper = useSwiper();
+//   return (
+//     <div className=" absolute z-20 w-full top-1/2 opacity-55 md:opacity-100 md:top-1/2 right-0  md:w-full  flex flex-row justify-between">
+//       <a
+//         onClick={() => {
+//           swiper.slidePrev();
+//         }}
+//         className="cursor-pointer border-[1px] bg-black border-primaryColor rounded-full p-2"
+//       >
+//         <GrLinkPrevious className=" text-xl md:text-2xl text-white" />
+//       </a>
+//       <a
+//         onClick={() => {
+//           swiper.slideNext();
+//         }}
+//         className="cursor-pointer border-[1px] bg-black border-primaryColor rounded-full p-2"
+//       >
+//         <GrLinkNext className="text-xl md:text-2xl text-white" />
+//       </a>
+//     </div>
+//   );
+// };
 
 const Services = () => {
   const swiperRef = useRef(null);
+  const swiper = useSwiper();
   const [selectedHover, setSelectedHover] = React.useState(0);
+
+  const SwiperButtons = () => {
+    return (
+      <div className=" absolute z-20 w-full top-1/2 opacity-55 md:opacity-100 md:top-1/2 right-0  md:w-full  flex flex-row justify-between">
+        <a
+          onClick={() => {
+            swiper.slidePrev();
+          }}
+          className="cursor-pointer border-[1px] bg-black border-primaryColor rounded-full p-2"
+        >
+          <GrLinkPrevious className=" text-xl md:text-2xl text-white" />
+        </a>
+        <a
+          onClick={() => {
+            swiper.slideNext();
+          }}
+          className="cursor-pointer border-[1px] bg-black border-primaryColor rounded-full p-2"
+        >
+          <GrLinkNext className="text-xl md:text-2xl text-white" />
+        </a>
+      </div>
+    );
+  };
 
   return (
     <div className="flex z-0 min-h-screen flex-col items-center justify-between">
