@@ -4,7 +4,6 @@ import RevealOnScroll from "./RevealOnScroll";
 import { Swiper, useSwiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-// import required modules
 import { Pagination } from "swiper/modules";
 import { DeliveryItems } from "@/utils/consts";
 import Image from "next/image";
@@ -21,7 +20,7 @@ const SwiperButtons = () => {
         }}
         className="cursor-pointer border-[1px] border-primaryColor rounded-full p-2 mr-2"
       >
-        <GrLinkPrevious className="text-2xl text-white" />
+        <GrLinkPrevious className="text-xl text-white" />
       </a>
       <a
         onClick={() => {
@@ -29,7 +28,7 @@ const SwiperButtons = () => {
         }}
         className="cursor-pointer border-[1px] border-primaryColor rounded-full p-2 mr-2"
       >
-        <GrLinkNext className="text-2xl text-white" />
+        <GrLinkNext className="text-xl text-white" />
       </a>
     </div>
   );
@@ -57,7 +56,7 @@ const Delivery = () => {
             {"Delivering Excellence to Transform Businesses"}
           </h2>
           <div className="w-1/2 border-[1px] border-primaryColor my-6" />
-          <p className=" text-sm md:text-lg text-white leading-[1.75rem]">
+          <p className=" text-sm md:text-lg text-primaryText/80 leading-[1.75rem]">
             {
               "Are you wondering what sets us apart as the leading software solutions company? It's our unwavering commitment to our core values that truly make a difference."
             }
@@ -84,11 +83,11 @@ const Delivery = () => {
                         className="w-[50%] h-[50%] object-cover"
                       />
                     </div>
-                    <h3 className="text-primaryColor text-bold text-start text-[1.5rem] leading-[1.5rem] mt-4">
+                    <h3 className="text-primaryColor text-bold text-start text-[1.25rem] leading-[1.25rem] mt-4">
                       {item.title}
                     </h3>
                     <div className="w-1/2 border-[1px] border-primaryColor/50 my-4" />
-                    <p className="text-white text-md leading-[1.5rem] ">
+                    <p className="text-primaryText/80 text-md leading-[1.1rem] ">
                       {item.description}
                     </p>
                   </div>

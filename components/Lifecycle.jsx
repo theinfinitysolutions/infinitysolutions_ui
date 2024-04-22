@@ -21,7 +21,7 @@ export const SwiperButtons = () => {
         }}
         className="cursor-pointer border-[1px] bg-black border-primaryColor rounded-full p-2"
       >
-        <GrLinkPrevious className="text-2xl text-white" />
+        <GrLinkPrevious className="text-xl text-white" />
       </a>
       <a
         onClick={() => {
@@ -29,7 +29,7 @@ export const SwiperButtons = () => {
         }}
         className="cursor-pointer border-[1px] bg-black border-primaryColor rounded-full p-2"
       >
-        <GrLinkNext className="text-2xl text-white" />
+        <GrLinkNext className="text-xl text-white" />
       </a>
     </div>
   );
@@ -60,11 +60,11 @@ const Lifecycle = () => {
           <div className="flex flex-col w-full md:w-3/4">
             <h2 className="text-primaryColor text-bold text-3xl md:text-[2.5rem] md:leading-[2.5rem]">
               {
-                "Offering Exclusive Edge Following Custom Software Development Lifecycle"
+                "Providing Tailored Software Development Cycles for Competitive Edge"
               }
             </h2>
             <div className="w-1/4 border-[1px] border-primaryColor my-6" />
-            <p className=" text-sm md:text-lg text-white leading-[1.75rem]">
+            <p className=" text-sm md:text-lg text-primaryText/80 leading-[1.75rem]">
               {
                 "Are you wondering what sets us apart as the leading software solutions company? It's our unwavering commitment to our core values that truly make a difference."
               }
@@ -101,7 +101,7 @@ const Lifecycle = () => {
                         {item.title}
                       </h3>
                       <div className="w-1/2 border-[1px] border-primaryColor/50 my-4" />
-                      <p className="text-white text-md leading-[1.5rem] ">
+                      <p className="text-primaryText/80 text-md leading-[1.15rem] ">
                         {item.description}
                       </p>
                     </div>
