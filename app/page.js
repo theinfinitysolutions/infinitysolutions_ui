@@ -258,7 +258,7 @@ export default function Home() {
                 <h1 className="text-primaryColor/90 text-2xl animate-slideUpSmall">
                   {serviceList[selectedHover]?.title}
                 </h1>
-                <p className="text-md text-[#c7c7c7aa] mt-4 animate-slideUpSmall">
+                <p className="text-md text-primaryText/80 mt-4 animate-slideUpSmall">
                   {serviceList[selectedHover]?.description}
                 </p>
                 <p className="text-primaryColor mt-4">Applications</p>
@@ -310,7 +310,7 @@ export default function Home() {
                         setShowSideCard(true);
                       }, 300)();
                     }}
-                    className="flex  text-[#fff] group-hover:text-[#c7c7c755]   justify-start w-full  border-b-[1px] border-[#ffffff22] hover:border-[#ffffff44] transition-all duration-300 ease-in-out"
+                    className="flex  text-primaryText group-hover:text-[#c7c7c755]   justify-start w-full  border-b-[1px] border-[#ffffff22] hover:border-[#ffffff44] transition-all duration-300 ease-in-out"
                   >
                     <div className="hover:text-primaryText flex group/text flex-row items-start space-x-4 py-1">
                       <p className="text-[0.75rem] ">0{index + 1}</p>
@@ -347,7 +347,7 @@ export default function Home() {
                   </span>
                 ))}
               </h1>
-              <p className="text-[#c7c7c7aa] text-md animate-slideUp delay-1000">
+              <p className="text-primaryText/80 text-md animate-slideUp delay-1000">
                 The Infinity Solutions is a technology company that provides
                 software development services to enterprises and startups. We
                 specialize in web and mobile app development, UI/UX design, and
@@ -365,7 +365,7 @@ export default function Home() {
                   <h2 className="text-lg text-primaryColor">
                     {"Tailored Solutions"}
                   </h2>
-                  <p className="text-sm mt-4 text-primaryText/60">
+                  <p className="text-sm mt-4 text-primaryText/80">
                     {
                       "We prioritize understanding your needs to deliver customized, innovative solutions that drive business growth."
                     }
@@ -375,7 +375,7 @@ export default function Home() {
                   <h2 className="text-lg text-primaryColor">
                     {"Comprehensive Expertise"}
                   </h2>
-                  <p className="text-sm mt-4 text-primaryText/60">
+                  <p className="text-sm mt-4 text-primaryText/80">
                     {
                       "We excel in web, mobile, and custom software development, alongside robust data management solutions."
                     }
@@ -387,7 +387,7 @@ export default function Home() {
                   <h2 className="text-lg text-primaryColor">
                     {"Cutting-Edge Solutions"}
                   </h2>
-                  <p className="text-sm mt-4 text-primaryText/60">
+                  <p className="text-sm mt-4 text-primaryText/80">
                     {
                       "Our experienced team leverages the latest technologies to deliver solutions that exceed expectations."
                     }
@@ -397,7 +397,7 @@ export default function Home() {
                   <h2 className="text-lg text-primaryColor">
                     {"Reliable Support"}
                   </h2>
-                  <p className="text-sm mt-4 text-primaryText/60">
+                  <p className="text-sm mt-4 text-primaryText/80">
                     {
                       "Count on us for ongoing support and partnership, ensuring your software solutions evolve with your business."
                     }

@@ -9,7 +9,8 @@ import Head from "next/head";
 const inter = Lora({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "The Infinity Solutions",
+  title:
+    "The Infinity Solutions - Best Tech Consultancy in India - Website, Mobile App, & Custom Tech Solutions | Data Analysis | Data Mining",
   description:
     "The Infinity Solutions - Best Tech Consultancy in India - Website,  Mobile App, & Custom Tech Solutions | Data Analysis | Data Mining",
 };
@@ -20,22 +21,42 @@ export default function RootLayout({ children }) {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>
-          The Infinity Solutions - Best Tech Consultancy in India - Website,
-          Mobile App, & Custom Tech Solutions | Data Analysis | Data Mining
-        </title>
+        <title>The Infinity Solutions</title>
         <meta
           name="description"
-          content="The Infinity Solutions is a tech consultancy in India that provides website, mobile app, and custom tech solutions, data analysis, and data mining services."
+          content="The Infinity Solutions - Best Tech Consultancy in India - Website,  Mobile App, & Custom Tech Solutions | Data Analysis | Data Mining"
         />
+
+        <meta
+          property="og:url"
+          content="https://www.theinfinitysolutions.net"
+        />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content="The Infinity Solutions" />
         <meta
           property="og:description"
-          content="The Infinity Solutions is a tech consultancy in India that provides website, mobile app, and custom tech solutions, data analysis, and data mining services."
+          content="The Infinity Solutions - Best Tech Consultancy in India - Website,  Mobile App, & Custom Tech Solutions | Data Analysis | Data Mining"
         />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://theinfinitysolutions.net" />
         <meta property="og:image" content="/opengraph-image.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="theinfinitysolutions.net" />
+        <meta
+          property="twitter:url"
+          content="https://www.theinfinitysolutions.net"
+        />
+        <meta name="twitter:title" content="The Infinity Solutions" />
+        <meta
+          name="twitter:description"
+          content="The Infinity Solutions - Best Tech Consultancy in India - Website,  Mobile App, & Custom Tech Solutions | Data Analysis | Data Mining"
+        />
+        <meta name="twitter:image" content="/opengraph-image.png" />
+
+        <meta property="og:title" content="The Infinity Solutions" />
+        <meta
+          property="og:description"
+          content="The Infinity Solutions - Best Tech Consultancy in India - Website, Mobile App, & Custom Tech Solutions | Data Analysis | Data Mining"
+        />
       </Head>
       <body
         className={`${inter.className} bg-black max-w-screen overflow-x-hidden`}
