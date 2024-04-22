@@ -93,7 +93,7 @@ const Navbar = () => {
             >
               <div className=" animate-rotate absolute inset-0 h-full w-full rounded-full  bg-[conic-gradient(#0097b2_20deg,transparent_120deg)]"></div>
               <div className="relative z-20 flex flex-row justify-center w-full items-center rounded-full bg-black hover:bg-[#121212] px-2 py-2 md:px-4 md:py-2">
-                <p className="relative z-50 w-full block rounded-lg border border-black bg-black  text-center text-[12px] md:text-sm text-primaryText shadow-2xl transition duration-200">
+                <p className="relative z-50 w-full block rounded-lg border border-black bg-black  text-center text-[12px] md:text-xs text-primaryText shadow-2xl transition duration-200">
                   Contact Us
                 </p>
                 <svg
