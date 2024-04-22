@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
           name="description"
           content="The Infinity Solutions - Best Tech Consultancy in India - Website,  Mobile App, & Custom Tech Solutions | Data Analysis | Data Mining"
         />
+        <link rel="icon" type="image/png" href="./favicon.ico" />
 
         <meta
           property="og:url"

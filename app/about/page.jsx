@@ -19,7 +19,7 @@ const AboutUs = () => {
               </span>
             ))}
           </h1>
-          <p className="mt-8 text-lg ext-primaryText/80 text-center">
+          <p className="mt-8 text-lg text-primaryText/80 text-center">
             {
               "Welcome to The Infinity Solutions - where innovation meets excellence in IT consultancy services. We are a team of passionate individuals, dedicated to crafting bespoke solutions for your digital needs. We combine cutting-edge technology with user-friendly design to create seamless experiences that resonate with your audience. Whether it's developing intuitive websites, engaging mobile apps, or powerful software solutions, we prioritize usability and accessibility without compromising on functionality or performance."
             }
