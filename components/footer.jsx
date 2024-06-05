@@ -119,7 +119,7 @@ const Footer = () => {
                 <a
                   onClick={() => {
                     window.open(
-                      "mailto:info@theinfinitysolutions.net",
+                      "mailto:raman@theinfinitysolutions.net",
                       "_blank"
                     );
                   }}
@@ -133,7 +133,7 @@ const Footer = () => {
                   </div>
                   <div className="ml-2">
                     <p className="text-sm md:text-md text-primaryColor">
-                      {"info@theinfinitysolutions.net"}
+                      {"raman@theinfinitysolutions.net"}
                     </p>
                   </div>
                 </a>
