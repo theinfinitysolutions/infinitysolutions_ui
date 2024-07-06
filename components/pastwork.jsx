@@ -69,14 +69,14 @@ const PastWork = () => {
           <ImgBox
             image={"/hydroshark.png"}
             link="https://www.hydroshark.com/"
-            title="Mahakali Sarees"
+            title="Hydroshark"
           />
         </div>
         <div className="absolute h-[30vh] w-[50vh] left-[15vh] top-[120vh] -z-0">
           <ImgBox
             image={"/dolesmusic.png"}
             link="https://www.dolesmusic.com/"
-            title="Shree Govind Tourism"
+            title="Dole's Music"
           />
         </div>
         <div className="absolute h-[40vh] w-[80vh] left-[10vh] top-[30vh] -z-0">
