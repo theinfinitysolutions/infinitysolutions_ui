@@ -94,7 +94,12 @@ const Services = () => {
                               className="flex flex-col px-4 py-4 items-center border-[1px] rounded-xl mr-2 border-[#383e48]"
                             >
                               <div className=" h-[5vh] w-[5vh] md:h-[7.5vh] md:w-[7.5vh] relative">
-                                <Image src={item.image} layout="fill" />
+                                <Image
+                                  src={
+                                    process.env.NEXT_PUBLIC_API_URL + item.image
+                                  }
+                                  layout="fill"
+                                />
                               </div>
                               <p className="text-[#383e48] mt-2 text-md">
                                 {item.title}

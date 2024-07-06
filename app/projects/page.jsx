@@ -100,7 +100,7 @@ const Projects = () => {
                     >
                       <div className=" h-[3vh] w-[3vh] md:h-[7.5vh] md:w-[7.5vh] relative">
                         <Image
-                          src={item.image}
+                          src={process.env.NEXT_PUBLIC_API_URL + item.image}
                           objectFit="contain"
                           layout="fill"
                         />
@@ -126,7 +126,9 @@ const Projects = () => {
           </div>
           <div className="flex relative w-full md:w-7/12 h-[30vh] md:h-[50vh]">
             <Image
-              src={projects[currentProject].image}
+              src={
+                process.env.NEXT_PUBLIC_API_URL + projects[currentProject].image
+              }
               alt={projects[currentProject].title}
               layout="fill"
               objectFit={"contain"}

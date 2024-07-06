@@ -76,7 +76,7 @@ const Delivery = () => {
                   <div className="flex flex-col items-start justify-center">
                     <div className=" w-full md:w-[20vw] h-[20vh] md:h-[30vh] relative">
                       <Image
-                        src={item.icon}
+                        src={process.env.NEXT_PUBLIC_API_URL + item.icon}
                         alt={item.title}
                         layout="fill"
                         objectFit="cover"
