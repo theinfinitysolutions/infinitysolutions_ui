@@ -196,6 +196,87 @@ export const serviceList = [
 
 export const projects = [
   {
+    title: "Hydroshark",
+    description: "India's first carbonated hydration drink",
+    image: "/hydroshark.png",
+    type: "Website",
+    location: "India",
+    industry: "Beverages",
+    testimonial: {
+      name: "Kaushalendra Goyal",
+      designation: "Director, Hydroshark",
+      message:
+        "The team at Infinity Solutions did an amazing job in developing our e-commerce platform. The website is user-friendly, visually appealing, and has helped us boost our online sales.",
+    },
+    link: "https://hydroshark.in",
+    techStack: [
+      {
+        image: "/nextjs.png",
+        title: "NextJS",
+      },
+      {
+        image: "/django.png",
+        title: "Django",
+      },
+      {
+        image: "/postgresql.png",
+        title: "PostgreSQL",
+      },
+    ],
+  },
+  {
+    title: "Dole's Music",
+    description:
+      "A portfolio website for an independent music producer and composer.",
+    image: "/dolesmusic.png",
+    type: "Website",
+    location: "India",
+    industry: "Music",
+    testimonial: {
+      name: "Doleshwar Raj",
+      designation: "Music Producer",
+      message:
+        "Infinity Solutions did a fantastic job in creating my portfolio website. The design and functionality are top-notch, and I am extremely satisfied with the outcome.",
+    },
+    link: "https://dolesmusic.com",
+    techStack: [
+      {
+        image: "/nextjs.png",
+        title: "NextJS",
+      },
+    ],
+  },
+  {
+    title: "Fleet Docker",
+    description:
+      "Empower your fleet with real-time insights and actionable data.",
+    image: "/fleetdocker.png",
+    type: "SAAS",
+    location: "India",
+    industry: "Transportation",
+    testimonial: {
+      name: "Ramanpreet Singh",
+      designation: "CEO, Fleet Docker",
+      message:
+        "The team at Infinity Solutions developed a robust and user-friendly hospital management system for us. It has streamlined our operations and improved patient care.",
+    },
+    link: "https://www.fleetdocker.com/",
+    techStack: [
+      {
+        image: "/nextjs.png",
+        title: "NextJS",
+      },
+      {
+        image: "/django.png",
+        title: "Django",
+      },
+      {
+        image: "/postgresql.png",
+        title: "PostgreSQL",
+      },
+    ],
+  },
+  {
     title: "Ace Resumes",
     description:
       "A platform for creating professional resumes with customizable templates and easy-to-use tools.",
@@ -255,33 +336,27 @@ export const projects = [
       },
     ],
   },
+
   {
-    title: "Shree Govind Tourism",
+    title: "Newton ICAD",
     description:
-      "A travel agency website for booking tours and travel packages.",
-    image: "/sgt.png",
+      "Babylon Newton ICAD has gone through an impressive journey during the past 3 to 4 years by supporting children of all ages with varied needs.",
+    image: "/newton.png",
+
     type: "Website",
-    industry: "Travel, Tourism",
-    testimonial: {
-      name: "Bhasker",
-      designation: "Director, Shree Govind Tourism",
-      message:
-        "The team at Infinity Solutions is highly skilled and professional. They developed our website exactly as per our requirements and provided excellent support throughout the project.",
-    },
     location: "India",
-    link: "https://www.shreegovindtourism.com",
+    industry: "Healthcare Services",
+    testimonial: {
+      name: "Newton ICAD",
+      designation: "Director, Newton ICAD",
+      message:
+        "The team at Infinity Solutions developed a robust and user-friendly hospital management system for us. It has streamlined our operations and improved patient care.",
+    },
+    link: "http://144.24.111.231:7009/",
     techStack: [
       {
-        image: "/vuejs.png",
-        title: "Vuejs",
-      },
-      {
-        image: "/django.png",
-        title: "Django",
-      },
-      {
-        image: "/postgresql.png",
-        title: "PostgreSQL",
+        image: "/nextjs.png",
+        title: "NextJS",
       },
     ],
   },

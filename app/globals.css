@@ -108,3 +108,16 @@ body {
 .text3d {
   animation: rotateAll 2000ms ease-in-out; 
 }
+
+.marqee {
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
