@@ -65,17 +65,17 @@ const PastWork = () => {
           />
         </div>
 
-        <div className="absolute h-[30vh] w-[50vh] right-[50vh] top-[100vh] -z-0">
+        <div className="absolute h-[30vh] w-[55vh] right-[50vh] top-[100vh] -z-0">
           <ImgBox
-            image={"/mahakali.png"}
-            link="https://mahakalisarees.com/"
+            image={"/hydroshark.png"}
+            link="https://www.hydroshark.com/"
             title="Mahakali Sarees"
           />
         </div>
         <div className="absolute h-[30vh] w-[50vh] left-[15vh] top-[120vh] -z-0">
           <ImgBox
-            image={"/sgt.png"}
-            link="https://www.shreegovindtourism.com/"
+            image={"/dolesmusic.png"}
+            link="https://www.dolesmusic.com/"
             title="Shree Govind Tourism"
           />
         </div>
@@ -93,7 +93,7 @@ const PastWork = () => {
             title="Raksheet Hospital"
           />
         </div>
-        <div className="absolute h-[50vh] w-[30vh] right-[5vh] top-[100vh] z-10">
+        <div className="absolute h-[50vh] w-[27.5vh] right-[5vh] top-[100vh] z-10">
           <ImgBox
             image={"/acemobile.jpeg"}
             title="Ace Resumes"
