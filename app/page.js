@@ -139,7 +139,7 @@ export default function Home() {
                 })}
               </div>
             </div>
-            {/* <h1 className="overflow-hidden text-[3rem] text3d text-center font-bold leading-[3rem] text-[#ffffffcc]">
+            {/* <h2 className="overflow-hidden text-[3rem] text3d text-center font-bold leading-[3rem] text-[#ffffffcc]">
               {text1.split("").map((char, index) => (
                 <span
                   className={`animate-slideUp inline-block  [animation-fill-mode:backwards]`}
@@ -149,10 +149,10 @@ export default function Home() {
                   {char === " " ? "\u00A0" : char}
                 </span>
               ))}
-            </h1> */}
-            <h1 className="overflow-hidden text-[1.25rem] md:text-[1rem] text-start md:text-center text3d text-primaryText">
+            </h2> */}
+            <h2 className="overflow-hidden text-[1.25rem] md:text-[1rem] text-start md:text-center text3d text-primaryText">
               {text2}
-            </h1>
+            </h2>
           </div>
           <motion.div
             style={{ y: y }}
@@ -224,7 +224,7 @@ export default function Home() {
           className="  relative flex flex-col w-10/12 md:w-[80vw] z-0 overflow-hidden"
         >
           <div className="flex flex-col  items-center">
-            <h1 className="overflow-hidden text-[2rem] md:text-[3rem] text3d text-center font-bold leading-[3rem] text-primaryColor">
+            <h2 className="overflow-hidden text-[2rem] md:text-[3rem] text3d text-center font-bold leading-[3rem] text-primaryColor">
               {section2.split("").map((char, index) => (
                 <span
                   className={`animate-slideUpSlow inline-block  [animation-fill-mode:backwards]`}
@@ -234,7 +234,7 @@ export default function Home() {
                   {char === " " ? "\u00A0" : char}
                 </span>
               ))}
-            </h1>
+            </h2>
           </div>
           <div className="w-full flex flex-row justify-between items-start md:mt-4">
             <div
@@ -255,9 +255,9 @@ export default function Home() {
                     : null
                 }`}
               >
-                <h1 className="text-primaryColor/90 text-2xl animate-slideUpSmall">
+                <h2 className="text-primaryColor/90 text-2xl animate-slideUpSmall">
                   {serviceList[selectedHover]?.title}
-                </h1>
+                </h2>
                 <p className="text-md text-primaryText/80 mt-4 animate-slideUpSmall">
                   {serviceList[selectedHover]?.description}
                 </p>
@@ -317,9 +317,9 @@ export default function Home() {
                   >
                     <div className="hover:text-primaryText flex group/text flex-row items-start space-x-4 py-1">
                       <p className="text-[0.75rem] ">0{index + 1}</p>
-                      <h1 className=" text-xl leading-[1.25rem] group-hover/text:translate-x-[20px] duration-200">
+                      <h2 className=" text-xl leading-[1.25rem] group-hover/text:translate-x-[20px] duration-200">
                         {item.title}
-                      </h1>
+                      </h2>
                     </div>
                   </a>
                 );
@@ -339,7 +339,7 @@ export default function Home() {
               <p className="text-primaryText text-xl md:text-2xl animate-slideUp">
                 Why?
               </p>
-              <h1 className=" text-[1.5rem] md:text-[2rem] text-start font-bold leading-[2rem] overflow-hidden text-[#0097b2]">
+              <h2 className=" text-[1.5rem] md:text-[2rem] text-start font-bold leading-[2rem] overflow-hidden text-[#0097b2]">
                 {section3.split("").map((char, index) => (
                   <span
                     className="animate-slideUp inline-block [animation-fill-mode:backwards]"
@@ -349,7 +349,7 @@ export default function Home() {
                     {char === " " ? "\u00A0" : char}
                   </span>
                 ))}
-              </h1>
+              </h2>
               <p className="text-primaryText/80 text-md animate-slideUp delay-1000">
                 The Infinity Solutions is a technology company that provides
                 software development services to enterprises and startups. We

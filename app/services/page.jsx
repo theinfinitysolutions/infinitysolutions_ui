@@ -29,7 +29,7 @@ const Services = () => {
       <div className="absolute z-0 inset-0 h-full to-0 w-full bg-transparent bg-[linear-gradient(to_right,#80808022_1px,transparent_1px),linear-gradient(to_bottom,#80808022_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_40%,#000_60%,transparent_100%)]"></div>
       <div className="flex flex-col w-10/12 mt-[10vh] md:mt-[2.5vh] z-0">
         <div className="flex flex-col  items-start">
-          <h1 className="overflow-hidden text-[2rem] md:text-[3rem] text3d text-center font-bold leading-[3rem] text-primaryColor">
+          <h2 className="overflow-hidden text-[2rem] md:text-[3rem] text3d text-center font-bold leading-[3rem] text-primaryColor">
             {section.split("").map((char, index) => (
               <span
                 className={`animate-slideUpSlow inline-block  [animation-fill-mode:backwards]`}
@@ -39,7 +39,7 @@ const Services = () => {
                 {char === " " ? "\u00A0" : char}
               </span>
             ))}
-          </h1>
+          </h2>
         </div>
         <div className="flex flex-row w-full items-center justify-between md:mt-8">
           <div className="w-full md:w-8/12">
@@ -62,9 +62,9 @@ const Services = () => {
                           : null
                       }`}
                     >
-                      <h1 className="text-primaryColor/90 text-xl md:text-2xl animate-slideUpSmall">
+                      <h2 className="text-primaryColor/90 text-xl md:text-2xl animate-slideUpSmall">
                         {item.title}
-                      </h1>
+                      </h2>
                       <p className=" text-sm md:text-md text-primaryText/80 mt-4 animate-slideUpSmall">
                         {item.description}
                       </p>
@@ -126,9 +126,9 @@ const Services = () => {
                 >
                   <div className="hover:text-primaryText flex group/text flex-row items-start space-x-4 py-1">
                     <p className="text-[0.75rem] ">0{index + 1}</p>
-                    <h1 className=" text-xl leading-[1.25rem] group-hover/text:translate-x-[20px] duration-200">
+                    <h2 className=" text-xl leading-[1.25rem] group-hover/text:translate-x-[20px] duration-200">
                       {item.title}
-                    </h1>
+                    </h2>
                   </div>
                 </a>
               );

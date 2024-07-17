@@ -75,12 +75,15 @@ const Navbar = () => {
           }}
           className="flex flex-col justify-between items-center w-[40%] md:w-[20%] cursor-pointer"
         >
-          <span className="text-xl md:text-4xl font-bold text-[#0097b2] before:translate-z-[10rem]">
-            The Infinity
-          </span>
-          <span className="text-xl md:text-4xl font-bold text-[#0097b2] before:translate-z-[10rem] -mt-[2.5%]">
-            Solutions
-          </span>
+          <h1 className=" text-wrap text-xl md:text-4xl m-0 text-center font-bold text-[#0097b2] before:translate-z-[10rem]">
+            {/* <span className="text-xl md:text-4xl font-bold text-[#0097b2] before:translate-z-[10rem]">
+              The Infinity
+            </span>
+            <span className="text-xl md:text-4xl font-bold text-[#0097b2] before:translate-z-[10rem] -mt-[2.5%]">
+              Solutions
+            </span> */}
+            The Infinity Solutions
+          </h1>
         </a>
         <div className="w-[40vw] md:w-[25%] 2xl:w-[20%]">
           <div className=" flex w-full md:max-w-lg items-center justify-end">

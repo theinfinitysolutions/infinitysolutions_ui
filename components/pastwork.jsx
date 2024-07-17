@@ -44,7 +44,7 @@ const PastWork = () => {
         </div>
 
         <div className="flex flex-col  select-none	 items-start mt-[5%] ">
-          <h1 className="overflow-hidden text-[48px] text-start font-bold leading-[6rem] text-[#0097b2]">
+          <h2 className="overflow-hidden text-[48px] text-start font-bold leading-[6rem] text-[#0097b2]">
             {section2.split("").map((char, index) => (
               <span
                 className="animate-slideUp inline-block [animation-fill-mode:backwards]"
@@ -54,7 +54,7 @@ const PastWork = () => {
                 {char === " " ? "\u00A0" : char}
               </span>
             ))}
-          </h1>
+          </h2>
         </div>
 
         <div className="absolute h-[50vh] w-[80vh] -right-[20vh] top-[40vh] -z-0">
@@ -111,7 +111,7 @@ const PastWork = () => {
         className="flex md:hidden  flex-col md:h-[150vh] w-full relative z-0 overflow-hidden px-[10vw]"
       >
         <div className="flex flex-col  items-start mt-[5%] ">
-          <h1 className="overflow-hidden text-[2rem] md:text-[3rem] text-start font-bold leading-[6rem] text-[#0097b2]">
+          <h2 className="overflow-hidden text-[2rem] md:text-[3rem] text-start font-bold leading-[6rem] text-[#0097b2]">
             {section2.split("").map((char, index) => (
               <span
                 className="animate-slideUpSlow inline-block [animation-fill-mode:backwards]"
@@ -121,7 +121,7 @@ const PastWork = () => {
                 {char === " " ? "\u00A0" : char}
               </span>
             ))}
-          </h1>
+          </h2>
         </div>
 
         <div className="  h-[30vh] w-full mb-8  top-[40vh] -z-0">

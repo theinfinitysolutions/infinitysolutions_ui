@@ -14,7 +14,7 @@ const ContactUs = () => {
           <div className="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#80808022_1px,transparent_1px),linear-gradient(to_bottom,#80808022_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
           <div className="flex flex-col w-full md:w-[50%] items-start justify-center px-8">
-            <h1 className="overflow-hidden text-[3rem] text-center font-bold leading-[3rem] text-primaryColor">
+            <h2 className="overflow-hidden text-[3rem] text-center font-bold leading-[3rem] text-primaryColor">
               {section4.split("").map((char, index) => (
                 <span
                   className={`animate-slideUpSlow inline-block [animation-fill-mode:backwards]`}
@@ -24,7 +24,7 @@ const ContactUs = () => {
                   {char === " " ? "\u00A0" : char}
                 </span>
               ))}
-            </h1>
+            </h2>
             <p className="text-lg text-primaryText/80 animate-slideUpSmall">
               {
                 "Have a question or want to discuss a project? We'd love to hear from you. Fill out the form below and we'll get back to you within 4 hours."
