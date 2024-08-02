@@ -18,6 +18,16 @@ import "swiper/css/effect-creative";
 
 const section = "Our Services";
 
+function debounce(func, timeout = 300) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, timeout);
+  };
+}
+
 const Services = () => {
   const swiperRef = useRef(null);
   // const swiper = useSwiper();
@@ -25,9 +35,9 @@ const Services = () => {
 
   return (
     <div className="flex z-0 min-h-screen flex-col items-center justify-between">
-      <div className="absolute z-10 flex flex-col w-full top-0 h-72 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#0097b244] via-[#0097b211] to-[#0097b200] "></div>
+      <div className="absolute z-0 flex flex-col w-full top-0 h-72 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#0097b244] via-[#0097b211] to-[#0097b200] "></div>
       <div className="absolute z-0 inset-0 h-full to-0 w-full bg-transparent bg-[linear-gradient(to_right,#80808022_1px,transparent_1px),linear-gradient(to_bottom,#80808022_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_40%,#000_60%,transparent_100%)]"></div>
-      <div className="flex flex-col w-10/12 mt-[10vh] md:mt-[2.5vh] z-0">
+      <div className="flex flex-col w-10/12 mt-[10vh] md:mt-[5vh] z-0">
         <div className="flex flex-col  items-start">
           <h2 className="overflow-hidden text-[2rem] md:text-[3rem] text3d text-center font-bold leading-[3rem] text-primaryColor">
             {section.split("").map((char, index) => (
@@ -114,19 +124,22 @@ const Services = () => {
               })}
             </Swiper>
           </div>
-          <div className="hidden md:flex flex-col w-full md:w-4/12 group items-center justify-center px-8">
+          <div className="hidden md:flex flex-col w-full md:w-4/12 group items-center justify-start px-8">
             {serviceList.map((item, index) => {
               return (
                 <a
                   key={item.index}
-                  onClick={() => {
-                    swiperRef.current.swiper.slideTo(index);
+                  onMouseEnter={() => {
+                    debounce(() => {
+                      setSelectedHover(index);
+                      setShowSideCard(true);
+                    }, 300)();
                   }}
-                  className="flex  text-[#fff] group-hover:text-[#c7c7c755]  cursor-pointer justify-start w-full  border-b-[1px] border-[#ffffff22] hover:border-[#ffffff44] transition-all duration-300 ease-in-out"
+                  className="flex  text-primaryText group-hover:text-[#c7c7c755] py-2  justify-start w-full  border-b-[1px] border-[#ffffff22] hover:border-[#ffffff44] transition-all duration-300 ease-in-out"
                 >
                   <div className="hover:text-primaryText flex group/text flex-row items-start space-x-4 py-1">
                     <p className="text-[0.75rem] ">0{index + 1}</p>
-                    <h2 className=" text-xl leading-[1.25rem] group-hover/text:translate-x-[20px] duration-200">
+                    <h2 className=" text-xl leading-[1.25rem] lg:text-[1.25rem] lg:leading-[1.25em] group-hover/text:translate-x-[20px] duration-200">
                       {item.title}
                     </h2>
                   </div>
@@ -143,7 +156,7 @@ const Services = () => {
           </p>
           <div className=" flex w-full md:max-w-lg items-center justify-center mt-4">
             <a
-              onClick={() => {}}
+              href="/#contactus"
               className="relative z-10 flex w-[35vw] md:w-[12.5vw] cursor-pointer items-center overflow-hidden rounded-full border border-[#0097b255] p-[1.5px] shadow-[0_8px_48px_4px_rgba(0,151,178,0.2)]"
             >
               <div className=" animate-rotate absolute inset-0 h-full w-full rounded-full  bg-[conic-gradient(#0097b2_20deg,transparent_120deg)]"></div>

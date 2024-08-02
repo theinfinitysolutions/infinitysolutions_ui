@@ -236,7 +236,7 @@ export default function Home() {
               ))}
             </h2>
           </div>
-          <div className="w-full flex flex-row justify-between items-start md:mt-4">
+          <div className="w-full flex flex-row justify-between items-start md:mt-8">
             <div
               className={`hidden md:flex flex-col w-[55%] items-center justify-center `}
             >
@@ -313,11 +313,11 @@ export default function Home() {
                         setShowSideCard(true);
                       }, 300)();
                     }}
-                    className="flex  text-primaryText group-hover:text-[#c7c7c755]   justify-start w-full  border-b-[1px] border-[#ffffff22] hover:border-[#ffffff44] transition-all duration-300 ease-in-out"
+                    className="flex  text-primaryText group-hover:text-[#c7c7c755] py-2  justify-start w-full  border-b-[1px] border-[#ffffff22] hover:border-[#ffffff44] transition-all duration-300 ease-in-out"
                   >
                     <div className="hover:text-primaryText flex group/text flex-row items-start space-x-4 py-1">
                       <p className="text-[0.75rem] ">0{index + 1}</p>
-                      <h2 className=" text-xl leading-[1.25rem] group-hover/text:translate-x-[20px] duration-200">
+                      <h2 className=" text-xl leading-[1.25rem] lg:text-[1.75rem] lg:leading-[2rem] group-hover/text:translate-x-[20px] duration-200">
                         {item.title}
                       </h2>
                     </div>

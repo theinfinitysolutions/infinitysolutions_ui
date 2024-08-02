@@ -166,7 +166,10 @@ const Projects = () => {
             }
           </p>
           <div className=" flex w-full md:max-w-lg items-center justify-center mt-4">
-            <div className="relative z-10 flex w-[35vw] md:w-[12.5vw] cursor-pointer items-center overflow-hidden rounded-full border border-[#0097b255] p-[1.5px] shadow-[0_8px_48px_4px_rgba(0,151,178,0.2)]">
+            <a
+              href="/#contactus"
+              className="relative z-10 flex w-[35vw] md:w-[12.5vw] cursor-pointer items-center overflow-hidden rounded-full border border-[#0097b255] p-[1.5px] shadow-[0_8px_48px_4px_rgba(0,151,178,0.2)]"
+            >
               <div className=" animate-rotate absolute inset-0 h-full w-full rounded-full  bg-[conic-gradient(#0097b2_20deg,transparent_120deg)]"></div>
               <div className="relative z-20 flex flex-row justify-center w-full items-center rounded-full bg-black hover:bg-[#121212] px-2 py-2 md:px-4 md:py-2">
                 <p className="relative z-50 w-full block rounded-lg border border-black bg-black  text-center text-[12px] md:text-sm text-primaryText shadow-2xl transition duration-200">
@@ -187,7 +190,7 @@ const Projects = () => {
                   />
                 </svg>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
