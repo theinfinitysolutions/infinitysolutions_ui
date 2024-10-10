@@ -59,16 +59,16 @@ const PastWork = () => {
 
         <div className="absolute h-[50vh] w-[80vh] -right-[20vh] top-[40vh] -z-0">
           <ImgBox
-            image={"/aceresumes.png"}
-            title="Ace Resumes"
-            link={"http://144.24.111.231:7003/"}
+            image={"/fleetdocker.png"}
+            title="Fleet Docker"
+            link={"https://www.fleetdocker.com/"}
           />
         </div>
 
         <div className="absolute h-[30vh] w-[55vh] right-[50vh] top-[100vh] -z-0">
           <ImgBox
             image={"/hydroshark.png"}
-            link="https://www.hydroshark.com/"
+            link="https://www.hydroshark.in/"
             title="Hydroshark"
           />
         </div>
@@ -81,15 +81,15 @@ const PastWork = () => {
         </div>
         <div className="absolute h-[40vh] w-[80vh] left-[10vh] top-[30vh] -z-0">
           <ImgBox
-            image={"/raksheet.png"}
-            link="http://144.24.111.231:7005/home"
-            title="Raksheet Hospital"
+            image={"/babylon.png"}
+            link="https://babylonhospital.com"
+            title="Babylon Hospital"
           />
         </div>
         <div className="absolute h-[50vh] w-[30vh] left-[30vh] top-[60vh] z-10">
           <ImgBox
             image={"/raksheetmobile.jpeg"}
-            link="http://144.24.111.231:7005/home"
+            link="https://www.raksheethospital.com/"
             title="Raksheet Hospital"
           />
         </div>
@@ -97,7 +97,7 @@ const PastWork = () => {
           <ImgBox
             image={"/acemobile.jpeg"}
             title="Ace Resumes"
-            link={"http://144.24.111.231:7003/"}
+            link={"https://www.aceresumes.com/"}
           />
         </div>
       </section>
@@ -126,30 +126,37 @@ const PastWork = () => {
 
         <div className="  h-[30vh] w-full mb-8  top-[40vh] -z-0">
           <ImgBox
-            image={"/aceresumes.png"}
-            title="Ace Resumes"
-            link={"http://144.24.111.231:7003/"}
+            image={"/hydroshark.png"}
+            link="https://www.hydroshark.in/"
+            title="Hydroshark"
           />
         </div>
 
         <div className="h-[30vh] w-full mb-8 right-[50vh] top-[100vh] -z-0">
           <ImgBox
-            image={"/mahakali.png"}
-            link="https://mahakalisarees.com/"
-            title="Mahakali Sarees"
+            image={"/fleetdocker.png"}
+            title="Ace Resumes"
+            link={"https://fleetdocker.com"}
           />
         </div>
         <div className="h-[30vh] w-full mb-8 left-[15vh] top-[120vh] -z-0">
           <ImgBox
-            image={"/sgt.png"}
-            link="https://www.shreegovindtourism.com/"
-            title="Shree Govind Tourism"
+            image={"/dolesmusic.png"}
+            link="https://www.dolesmusic.com/"
+            title="Dole's Music"
+          />
+        </div>
+        <div className=" h-[30vh] w-full mb-8 left-[10vh] top-[30vh] -z-0">
+          <ImgBox
+            image={"/aceresumes.png"}
+            link="https://aceresumes.com"
+            title="Ace Resumes"
           />
         </div>
         <div className=" h-[30vh] w-full mb-8 left-[10vh] top-[30vh] -z-0">
           <ImgBox
             image={"/raksheet.png"}
-            link="http://144.24.111.231:7005/home"
+            link="https://www.raksheethospital.com/"
             title="Raksheet Hospital"
           />
         </div>

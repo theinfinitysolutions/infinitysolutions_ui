@@ -290,7 +290,7 @@ export const projects = [
         "I am very impressed with the quality of work and the dedication of the team. They delivered the project on time and exceeded our expectations. Highly recommended!",
     },
     location: "India",
-    link: "http://144.24.111.231:7003",
+    link: "https://www.aceresumes.com/",
     techStack: [
       {
         image: "/nextjs.png",
@@ -307,28 +307,28 @@ export const projects = [
     ],
   },
   {
-    title: "Mahakali Sarees",
+    title: "Babylon Hospital",
     description:
-      "An e-commerce website for selling a wide range of traditional Indian sarees.",
-    image: "/mahakali.png",
+      "Babylon Hospital is the best child care and women care hospital in Jaipur, offers expert medical services for pediatric and women's healthcare. Book an appointment",
+    image: "/babylon.png",
+    testimonial: {
+      name: "Babylon Hospital",
+      designation: "Director, Babylon Hospital",
+      message:
+        "The team at Infinity Solutions developed a robust and user-friendly hospital management system for us. It has streamlined our operations and improved patient care.",
+    },
     type: "Website",
     location: "India",
-    industry: "Fashion, E-commerce",
-    testimonial: {
-      name: "Manish Sanghai",
-      designation: "Director, Mahakali Sarees",
-      message:
-        "The team at Infinity Solutions did an amazing job in developing our e-commerce platform. The website is user-friendly, visually appealing, and has helped us boost our online sales.",
-    },
-    link: "https://mahakalisarees.com",
+    industry: "Healthcare Services",
+    link: "https://babylonhospital.com/",
     techStack: [
       {
         image: "/nextjs.png",
         title: "NextJS",
       },
       {
-        image: "/nodejs.png",
-        title: "Nodejs",
+        image: "/django.png",
+        title: "Django",
       },
       {
         image: "/postgresql.png",
@@ -336,7 +336,6 @@ export const projects = [
       },
     ],
   },
-
   {
     title: "Newton ICAD",
     description:
@@ -383,6 +382,36 @@ export const projects = [
       {
         image: "/django.png",
         title: "Django",
+      },
+      {
+        image: "/postgresql.png",
+        title: "PostgreSQL",
+      },
+    ],
+  },
+  {
+    title: "Mahakali Sarees",
+    description:
+      "An e-commerce website for selling a wide range of traditional Indian sarees.",
+    image: "/mahakali.png",
+    type: "Website",
+    location: "India",
+    industry: "Fashion, E-commerce",
+    testimonial: {
+      name: "Manish Sanghai",
+      designation: "Director, Mahakali Sarees",
+      message:
+        "The team at Infinity Solutions did an amazing job in developing our e-commerce platform. The website is user-friendly, visually appealing, and has helped us boost our online sales.",
+    },
+    link: "https://mahakalisarees.com",
+    techStack: [
+      {
+        image: "/nextjs.png",
+        title: "NextJS",
+      },
+      {
+        image: "/nodejs.png",
+        title: "Nodejs",
       },
       {
         image: "/postgresql.png",
